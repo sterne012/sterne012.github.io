@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 5.4.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="sterne">
+  
+
+  
+
+  
+
+  <title>Java | Welcome -Sterne&#39;s Blog-</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="alternate" href="/atom.xml" title="Welcome -Sterne's Blog-" type="application/atom+xml">
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/img/cover.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Welcome -Sterne&#39;s Blog-
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">Home</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">Links</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">Java</h1>
+          <h2 class="title-sub-wrap">
+            <strong>sterne</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-12-27T12:49:14.000Z" itemprop="datePublished">2021-12-27</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/java/">🏷️ java</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="自qt以来见到了更强-菜-的做界面语言"><a href="#自qt以来见到了更强-菜-的做界面语言" class="headerlink" title="自qt以来见到了更强(菜)的做界面语言!"></a>自qt以来见到了更强(菜)的做界面语言!</h1><h3 id="首先记得写各种变量并且统一加private"><a href="#首先记得写各种变量并且统一加private" class="headerlink" title="首先记得写各种变量并且统一加private"></a>首先记得写各种变量并且统一加private</h3><h3 id="然后把这些东西拍在构造函数开头"><a href="#然后把这些东西拍在构造函数开头" class="headerlink" title="然后把这些东西拍在构造函数开头:"></a>然后把这些东西拍在构造函数开头:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">super</span>(<span class="hljs-string">&quot;title&quot;</span>);<br>      <span class="hljs-keyword">this</span>.setSize(<span class="hljs-number">800</span>,<span class="hljs-number">300</span>);<span class="hljs-comment">//大小</span><br>      <span class="hljs-keyword">this</span>.setDefaultCloseOperation();<span class="hljs-comment">//按退出关闭，数据库连接的关闭见javaDB</span><br>      <span class="hljs-keyword">this</span>.setLocationRelativeTo(<span class="hljs-keyword">null</span>);<span class="hljs-comment">//设置位置居中</span><br>      <span class="hljs-keyword">this</span>.setLayout(<span class="hljs-keyword">new</span> xxxLayout());<span class="hljs-comment">//你想要的布局</span><br>      <span class="hljs-keyword">this</span>.setVisible(<span class="hljs-keyword">true</span>);<span class="hljs-comment">//可见，写在构造函数最后一行</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="为JPanel加小标题："><a href="#为JPanel加小标题：" class="headerlink" title="为JPanel加小标题："></a>为JPanel加小标题：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Border titleBorder = BorderFactory.createTitledBorder(<span class="hljs-string">&quot;数据操作&quot;</span>);<br>panel_operate.setBorder(titleBorder);<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="int-String转换"><a href="#int-String转换" class="headerlink" title="int/String转换:"></a>int/String转换:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Integer.parseInt(String s)<br>edge.toString()<span class="hljs-comment">//某个类中重写的toString函数</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="拆文件中字符串"><a href="#拆文件中字符串" class="headerlink" title="拆文件中字符串:"></a>拆文件中字符串:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">String arr[<span class="hljs-number">4</span>],s=<span class="hljs-string">&quot;11 45 14 1919810&quot;</span>;<br>arr=s.spilt(<span class="hljs-string">&quot; &quot;</span>);<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="对话框"><a href="#对话框" class="headerlink" title="对话框:"></a>对话框:</h3><p>消息对话框</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">JOptionPane.showMessageDialog(<span class="hljs-keyword">this</span>(填一个组件),<span class="hljs-string">&quot;主体显示的内容&quot;</span>);<br>JOptionPane.showMessageDialog(<span class="hljs-keyword">this</span>,<span class="hljs-string">&quot;neirong&quot;</span>,<span class="hljs-string">&quot;haoye&quot;</span>, JOptionPane.INFORMATION_MESSAGE);<span class="hljs-comment">//图标一个叹号,默认的</span><br></code></pre></td></tr></table></figure>
+
+<p><code>JOptionPane.INFORMATION_MESSAGE</code>:</p>
+<img src="/2021/12/27/Java/image-20211208182903152.png" class="" title="image-20211208182903152">
+
+<p><code>JOptionPane.PLAIN_MESSAGE</code>:</p>
+<img src="/2021/12/27/Java/image-20211208182945771.png" class="" title="image-20211208182945771">
+
+<p><code>JOptionPane.ERROR_MESSAGE</code>:</p>
+<img src="/2021/12/27/Java/image-20211208183021788.png" class="" title="image-20211208183021788">
+
+<p><code>JOptionPane.WARNING_MESSAGE:</code></p>
+<img src="/2021/12/27/Java/image-20211208183101003.png" class="" title="image-20211208183101003">
+
+<p><code>JOptionPane.QUESTION_MESSAGE</code>: 诶 这个挺可爱的</p>
+<img src="/2021/12/27/Java/image-20211208183142876.png" class="" title="image-20211208183142876">
+
+<h3 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h3><h4 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h4><h4 id="Jcomponent"><a href="#Jcomponent" class="headerlink" title="Jcomponent"></a>Jcomponent</h4><h4 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h4><h4 id="JFrame"><a href="#JFrame" class="headerlink" title="JFrame"></a>JFrame</h4><p>最好使用<code>this.getContentPane().add()</code>添加组件</p>
+<h4 id="JPanel"><a href="#JPanel" class="headerlink" title="JPanel"></a>JPanel</h4><h4 id="JDialog"><a href="#JDialog" class="headerlink" title="JDialog"></a>JDialog</h4><h4 id="JLabel"><a href="#JLabel" class="headerlink" title="JLabel"></a>JLabel</h4><p>一般就是显示一行文本(idea里面中文会乱码注意)</p>
+<h4 id="JTextField"><a href="#JTextField" class="headerlink" title="JTextField"></a>JTextField</h4><p>一个文本输入区,构造函数的参数设置输入区宽度（如果不写就只有一点点大）</p>
+<h4 id="JTextArea"><a href="#JTextArea" class="headerlink" title="JTextArea"></a>JTextArea</h4><h4 id="JButton"><a href="#JButton" class="headerlink" title="JButton"></a>JButton</h4><p>记得<code>button.addActionListener(this)</code></p>
+<h4 id="JCheckBox"><a href="#JCheckBox" class="headerlink" title="JCheckBox"></a>JCheckBox</h4><p>复选按钮</p>
+<h4 id="JRadioButton"><a href="#JRadioButton" class="headerlink" title="JRadioButton"></a>JRadioButton</h4><p>单选按钮</p>
+<h4 id="JButtonGroup"><a href="#JButtonGroup" class="headerlink" title="JButtonGroup"></a>JButtonGroup</h4><p>一组按钮才能实现单选</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">ButtonGroup bg=<span class="hljs-keyword">new</span> ButtonGroup();<br>bg.add(rb_male=<span class="hljs-keyword">new</span> JRadioButton(<span class="hljs-string">&quot;男&quot;</span>));<br>bg.add(rb_female=<span class="hljs-keyword">new</span> JRadioButton(<span class="hljs-string">&quot;女&quot;</span>));<br>rb_male.setSelected(<span class="hljs-keyword">true</span>);<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="JList-amp-DefaultListModel"><a href="#JList-amp-DefaultListModel" class="headerlink" title="JList&amp;DefaultListModel"></a>JList&amp;DefaultListModel</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">model=<span class="hljs-keyword">new</span> DefaultListModel&lt;&gt;();<br>list=<span class="hljs-keyword">new</span> JList&lt;&gt;(<span class="hljs-keyword">this</span>.model);<br></code></pre></td></tr></table></figure>
+
+<p>其他方法在课本P165 常用</p>
+<h4 id="JTable"><a href="#JTable" class="headerlink" title="JTable"></a>JTable</h4><p>太智障了，问就智障</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java">JTable jt;<br>DefaultTableModel model;<br><br>model=<span class="hljs-keyword">new</span> DefaultTableModel(title,<span class="hljs-number">20</span>);<br>jt=<span class="hljs-keyword">new</span> JTable(model);<br><br><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">query</span><span class="hljs-params">(String name)</span></span>&#123;<br>        String sql=<span class="hljs-keyword">null</span>;<br>        <span class="hljs-keyword">while</span>(model.getRowCount()!=<span class="hljs-number">0</span>) model.removeRow(<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">if</span>(name==<span class="hljs-keyword">null</span>)&#123;<br>            sql=<span class="hljs-string">&quot;SELECT * FROM mydb.goods&quot;</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            sql= <span class="hljs-string">&quot;SELECT * FROM mydb.goods WHERE type LIKE &#x27;%&quot;</span> +name+<span class="hljs-string">&quot;%&#x27;&quot;</span>;<br>        &#125;<br>        <span class="hljs-keyword">try</span> &#123;<br>            st= stmt.executeQuery(sql);<br>            <span class="hljs-keyword">while</span> (st.next())&#123;<br>                String[] s=<span class="hljs-keyword">new</span> String[]&#123;st.getString(<span class="hljs-number">1</span>),st.getString(<span class="hljs-number">2</span>),<br>                        st.getString(<span class="hljs-number">3</span>),st.getString(<span class="hljs-number">4</span>),<br>                        st.getString(<span class="hljs-number">5</span>)&#125;;<br>                model.addRow(s);<br>            &#125;<br>        &#125; <span class="hljs-keyword">catch</span> (SQLException e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="JComboBox"><a href="#JComboBox" class="headerlink" title="JComboBox"></a>JComboBox</h4><p>组合框</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">JComboBox jcbox=<span class="hljs-keyword">new</span> JComboBox&lt;&gt;(<span class="hljs-keyword">new</span> String[]&#123;<span class="hljs-string">&quot;品牌&quot;</span>,<span class="hljs-string">&quot;型号&quot;</span>,<span class="hljs-string">&quot;颜色&quot;</span>,<span class="hljs-string">&quot;马力&quot;</span>&#125;);<br><span class="hljs-keyword">int</span> val=jcbox.getSelectedIndex();<br></code></pre></td></tr></table></figure>
+
+
+
+<p>布局类:</p>
+<h4 id="BorderLayout"><a href="#BorderLayout" class="headerlink" title="BorderLayout"></a>BorderLayout</h4><p>边布局,有东西南北的</p>
+<h4 id="FlowLayout"><a href="#FlowLayout" class="headerlink" title="FlowLayout"></a>FlowLayout</h4><p>流布局,一直往后加</p>
+<h4 id="GridLayout"><a href="#GridLayout" class="headerlink" title="GridLayout"></a>GridLayout</h4><p>网格布局,两个参数rows行 cols列</p>
+<h3 id="中间容器"><a href="#中间容器" class="headerlink" title="中间容器:"></a>中间容器:</h3><h4 id="JScrollPane"><a href="#JScrollPane" class="headerlink" title="JScrollPane"></a>JScrollPane</h4><p>带有滚动条的视图容器,为其他组件提供可滚动视图,只要组件内容超过视图大小就会自动显示水平或垂直滚动条</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">panel1.add(<span class="hljs-keyword">new</span> JScrollPane(list));<br></code></pre></td></tr></table></figure>
+
+<h4 id="JSpiltPane"><a href="#JSpiltPane" class="headerlink" title="JSpiltPane"></a>JSpiltPane</h4><p>分割窗格</p>
+<h1 id="java-sql-server从入门到完全放弃到mySQL真香"><a href="#java-sql-server从入门到完全放弃到mySQL真香" class="headerlink" title="java-sql server从入门到完全放弃到mySQL真香"></a>java-sql server从入门到完全放弃到mySQL真香</h1><ol>
+<li><p>DriverManager驱动管理</p>
+<ul>
+<li><p>负责注册驱动 static void registerDriver(Driver driver)</p>
+<p>Class.forName(“com.mysql.jdbc.Driver”);//加载对应包中的Driver类，使用registerDriver方法</p>
+<p>但由于jdbc包已经自动注册了驱动所以可以不写，并且会有如下报错：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">Loading class `com.mysql.jdbc.Drive<span class="hljs-string">r&#x27;. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver&#x27;</span>. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.<br></code></pre></td></tr></table></figure></li>
+<li><p>获取数据库连接 static Connection getConnection(String url,String user,String password)</p>
+<p>url:指定连接路径jdbc:mysql://localhost:3306(ip地址:端口号)/MyDB(数据库名)</p>
+<p>在hexo中这个还是有点熟悉</p>
+</li>
+</ul>
+</li>
+<li><p>Connection</p>
+<ul>
+<li><p>获取执行sql的对象</p>
+<p>CreateStatement() 创建Statement对象，用于将sql语句发送到数据库</p>
+<p>prepareStatement(String sql)</p>
+</li>
+<li><p>管理事务</p>
+<p>开启事务 setAutoCommit(boolean autoCommit) 参数false即关闭自动提交，开启事务</p>
+<p>提交事务 commit()</p>
+<p>回滚事务 rollback()</p>
+</li>
+</ul>
+</li>
+<li><p>Statement 执行静态sql并返回结果对象</p>
+<ul>
+<li><p>执行sql</p>
+<p>boolean execute(String sql) 执行任意语句 true：第一个结果是ResultSet；false：更新计数或没有结果（？）</p>
+<p>int executeUpdate(String sql) 执行DML (insert update delete) &amp; DDL(create alter drop) (不常用)；返回值：影响的行数；DDL语句没有返回结果（返回0）</p>
+<p>Result executeQuery(String sql) 执行DQL(select)</p>
+</li>
+</ul>
+</li>
+<li><p>ResultSet 结果集对象，用类似游标读取</p>
+<ul>
+<li>boolean next():游标向下移一行（默认在第0行，向下一行之后才能获取表中数据）（若此行为空，返回false）</li>
+<li>以及类似next的 详见p321</li>
+<li>getxxx(参数):获取数据 （getString 获取String类型数据）；参数：int（table列号，<strong>从1开始</strong>）or String（table列名）</li>
+</ul>
+</li>
+<li><p>PreparedStatement(Statement的子类) 执行动态（预编译）sql并返回</p>
+</li>
+</ol>
+<p>导包：<code>C:\Program Files (x86)\MySQL\Connector J 8.0</code></p>
+<p>idea：复制这个文件到目录下，右键lib包 add as library</p>
+<p>eclipse：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/fnng/archive/2011/07/18/2110023.html">https://www.cnblogs.com/fnng/archive/2011/07/18/2110023.html</a></p>
+<p>工程文件夹右键-&gt;build path-&gt;add external archives选择包路径导入</p>
+<p>草，好奇幻，我从我写的另一个文件里复制过去会自动import，从这就不行。。</p>
+<h3 id="类开头写："><a href="#类开头写：" class="headerlink" title="类开头写："></a>类开头写：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">Connection connection=<span class="hljs-keyword">null</span>;<br>   Statement stmt = <span class="hljs-keyword">null</span>;<br>   ResultSet st=<span class="hljs-keyword">null</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="连接数据库："><a href="#连接数据库：" class="headerlink" title="连接数据库："></a>连接数据库：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span> &#123;<br>    Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);<br>    connection = DriverManager.getConnection(<span class="hljs-string">&quot;jdbc:mysql://localhost:3306/MyDB&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;zaq123456&quot;</span>);<br>    stmt = connection.createStatement();<br><br>&#125; <span class="hljs-keyword">catch</span> (ClassNotFoundException | SQLException e) &#123;<br>    e.printStackTrace();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="一般insert："><a href="#一般insert：" class="headerlink" title="一般insert："></a>一般insert：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(Person per)</span></span>&#123;<br>    String sql=<span class="hljs-string">&quot;INSERT INTO mydb.person VALUES(&quot;</span>+per.toString()+<span class="hljs-string">&quot;)&quot;</span>;<br>    <span class="hljs-keyword">try</span> &#123;<br>        stmt.executeUpdate(sql);<br>    &#125; <span class="hljs-keyword">catch</span> (SQLException e) &#123;<br>        e.printStackTrace();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="一般query："><a href="#一般query：" class="headerlink" title="一般query："></a>一般query：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">query</span><span class="hljs-params">(String name)</span></span>&#123;<br>    model.removeAllElements();<br>    String sql=<span class="hljs-keyword">null</span>;<br>    <span class="hljs-keyword">if</span>(name==<span class="hljs-keyword">null</span>)&#123;<br>        sql=<span class="hljs-string">&quot;SELECT * FROM mydb.person&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span>&#123;<br>        sql= <span class="hljs-string">&quot;SELECT * FROM mydb.person WHERE name LIKE &#x27;%&quot;</span> +name+<span class="hljs-string">&quot;%&#x27;&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">try</span> &#123;<br>        st= stmt.executeQuery(sql);<br>        <span class="hljs-keyword">while</span> (st.next())&#123;<br>            String s=st.getString(<span class="hljs-number">1</span>)+<span class="hljs-string">&quot;,&quot;</span>+st.getString(<span class="hljs-number">2</span>)+<span class="hljs-string">&quot;,&quot;</span>+<br>                    st.getString(<span class="hljs-number">3</span>)+<span class="hljs-string">&quot;,&quot;</span>+st.getString(<span class="hljs-number">4</span>)+<span class="hljs-string">&quot;,&quot;</span>+<br>                    st.getString(<span class="hljs-number">5</span>)+<span class="hljs-string">&quot;,&quot;</span>+st.getString(<span class="hljs-number">6</span>);<br>            model.addElement(s);<br>        &#125;<br>    &#125; <span class="hljs-keyword">catch</span> (SQLException e) &#123;<br>        e.printStackTrace();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="释放资源："><a href="#释放资源：" class="headerlink" title="释放资源："></a>释放资源：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDefaultCloseOperation</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(st!=<span class="hljs-keyword">null</span>)&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                st.close();<br>            &#125; <span class="hljs-keyword">catch</span> (SQLException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(stmt!=<span class="hljs-keyword">null</span>)&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                stmt.close();<br>            &#125; <span class="hljs-keyword">catch</span> (SQLException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(connection!=<span class="hljs-keyword">null</span>)&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                connection.close();<br>            &#125; <span class="hljs-keyword">catch</span> (SQLException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>        &#125;<br>        setDefaultCloseOperation(EXIT_ON_CLOSE);<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="线程：也写在这算了"><a href="#线程：也写在这算了" class="headerlink" title="线程：也写在这算了"></a>线程：也写在这算了</h1><img src="/2021/12/27/Java/image-20211219113425612.png" class="" title="image-20211219113425612">
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(e.getSource()==button_count)&#123;<br>    <span class="hljs-keyword">if</span>(thread.getState()!=Thread.State.NEW) &#123;<br>        thread=<span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">this</span>);<br>    &#125;<br>    thread.start();<br>    button_count.setEnabled(<span class="hljs-keyword">false</span>);<br>    button_stop.setEnabled(<span class="hljs-keyword">true</span>);<br><br>&#125;<br> <span class="hljs-keyword">if</span>(e.getSource()==button_stop)&#123;<br>    thread.interrupt();<br>    utton_stop.setEnabled(<span class="hljs-keyword">false</span>);<br>    button_count.setEnabled(<span class="hljs-keyword">true</span>);<br>&#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">double</span> i=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                label_thread.setText(String.format(<span class="hljs-string">&quot;%.1f&quot;</span>,i));<br>                i+=<span class="hljs-number">0.1</span>;<br>                Thread.sleep(<span class="hljs-number">100</span>);<br>            &#125; <span class="hljs-keyword">catch</span> (InterruptedException ex) &#123;<br>                <span class="hljs-keyword">break</span>;<span class="hljs-comment">//默认是backTrace，改为跳出循环</span><br>            &#125;<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="字节-amp-字符流：这绝对是最没有格式的一篇"><a href="#字节-amp-字符流：这绝对是最没有格式的一篇" class="headerlink" title="字节&amp;字符流：这绝对是最没有格式的一篇"></a>字节&amp;字符流：这绝对是最没有格式的一篇</h1><p>字节输入（即读取）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java">FileInputStream fis= <span class="hljs-keyword">null</span>;<br><span class="hljs-keyword">int</span> len;<br>String ans=<span class="hljs-string">&quot;&quot;</span>;<br><span class="hljs-keyword">try</span> &#123;<br>    fis = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;src\\JavaExam\\re2017\\types.txt&quot;</span>);<br>    <span class="hljs-keyword">while</span>((len=fis.read())!=-<span class="hljs-number">1</span>)&#123;<br>        ans+=(<span class="hljs-keyword">char</span>)len;<br>    &#125;<br>    System.out.println(ans);<br>&#125;<span class="hljs-keyword">catch</span> (IOException e) &#123;<br>    e.printStackTrace();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>字节输出（即写入）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span> &#123;<br>    fos =<span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;src\\javaExam\\re2018\\out.txt&quot;</span>,<span class="hljs-keyword">true</span>);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt; model.size();i++)&#123;<br>        String s=model.getElementAt(i)+<span class="hljs-string">&#x27;\n&#x27;</span>;<br>        <span class="hljs-comment">//ohhhhhhhhhh</span><br>        fos.write(s.getBytes(StandardCharsets.UTF_8));<br>    &#125;<br><br>&#125; <span class="hljs-keyword">catch</span> (IOException ex) &#123;<br>    JOptionPane.showMessageDialog(<span class="hljs-keyword">this</span>,<span class="hljs-string">&quot;未找到文件&quot;</span>);<br>    ex.printStackTrace();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2022/01/05/DSpta/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Hacking to The CS Homework</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/12/24/sqlQuery2/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">sqlQuery-对答案</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/img/avator.png" class="soft-size--round soft-style--box" alt="STERNE">
+    
+    
+      <h2>STERNE</h2>
+    
+    
+      <p>SDUer，大一入门，大二入土...</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>36</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        18
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>这里还什么都没有呢喵~</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">
+            帮助文档 (3)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/ACM/" style="font-size: 16.67px;" class="tags-cloud-7">ACM</a> <a href="/tags/Arc/" style="font-size: 10px;" class="tags-cloud-0">Arc</a> <a href="/tags/Arknights/" style="font-size: 10px;" class="tags-cloud-0">Arknights</a> <a href="/tags/CCPC/" style="font-size: 15px;" class="tags-cloud-5">CCPC</a> <a href="/tags/DataStructres/" style="font-size: 10px;" class="tags-cloud-0">DataStructres</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 11.67px;" class="tags-cloud-2">c</a> <a href="/tags/c/" style="font-size: 20px;" class="tags-cloud-10">c++</a> <a href="/tags/games/" style="font-size: 13.33px;" class="tags-cloud-3">games</a> <a href="/tags/hexo/" style="font-size: 10px;" class="tags-cloud-0">hexo</a> <a href="/tags/java/" style="font-size: 10px;" class="tags-cloud-0">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/note/" style="font-size: 11.67px;" class="tags-cloud-2">note</a> <a href="/tags/python/" style="font-size: 11.67px;" class="tags-cloud-2">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/review/" style="font-size: 16.67px;" class="tags-cloud-7">review</a> <a href="/tags/sql/" style="font-size: 18.33px;" class="tags-cloud-8">sql</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/sterne012" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/sterne012" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2022 <a href="/" target="_blank">sterne</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>

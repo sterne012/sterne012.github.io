@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 5.4.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="sterne">
+  
+
+  
+
+  
+
+  <title>数据库实验-1 | Welcome -Sterne&#39;s Blog-</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="alternate" href="/atom.xml" title="Welcome -Sterne's Blog-" type="application/atom+xml">
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/img/img4.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Welcome -Sterne&#39;s Blog-
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">Home</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">Links</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">数据库实验-1</h1>
+          <h2 class="title-sub-wrap">
+            <strong>sterne</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-10-18T14:30:41.000Z" itemprop="datePublished">2021-10-18</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/sql/">🏷️ sql</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <p>作业题</p>
+<p>第一周<span id="more"></span></p>
+<p>1、假设SQL Server服务已启动，并以Administrator身份登录计算机（文件名称自定）；请分别使用Management界面方式和T-SQL语句实现以下操作：</p>
+<p>\1) 在本地磁盘D上以学号为名字建立一文件夹。</p>
+<p>\2) 要求在本地磁盘D创建一个学生-课程数据库（名称为student），只有一个数据文件和日志文件，文件名称分别为stu和stu_log，物理名称为stu_data.mdf 和stu_log.ldf，初始大小分别为5MB和3MB，增长方式分别为10%和1MB，数据文件最大为500MB，日志文件大小不受限制。</p>
+<p>\3) 创建一个SPJ数据库，该数据库的主数据文件逻辑名称为SPJ_data，物理文件为SPJ.mdf，初始大小为10MB，最大尺寸为无限大，增长速度为10%；数据库的日志文件逻辑名称为SPJ_log，物理文件名为SPJ.ldf，初始大小为1MB，最大尺寸为50MB，增长速度为1MB。</p>
+<p>2、在student数据库中使用sql语句建立课本第三章中的三个表student、course、sc,输入如下数据，掌握课堂上讲的内容。</p>
+<table>
+<thead>
+<tr>
+<th>Sno</th>
+<th>Sname</th>
+<th>Ssex</th>
+<th>Sage</th>
+<th>Sdept</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200515001</td>
+<td>赵菁菁</td>
+<td>女</td>
+<td>23</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>200515002</td>
+<td>李勇</td>
+<td>男</td>
+<td>20</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>200515003</td>
+<td>张力</td>
+<td>男</td>
+<td>19</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>200515004</td>
+<td>张衡</td>
+<td>男</td>
+<td>18</td>
+<td>IS</td>
+</tr>
+<tr>
+<td>200515005</td>
+<td>张向东</td>
+<td>男</td>
+<td>20</td>
+<td>IS</td>
+</tr>
+<tr>
+<td>200515006</td>
+<td>张向丽</td>
+<td>女</td>
+<td>20</td>
+<td>IS</td>
+</tr>
+<tr>
+<td>200515007</td>
+<td>王芳</td>
+<td>女</td>
+<td>20</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>200515008</td>
+<td>王民生</td>
+<td>男</td>
+<td>25</td>
+<td>MA</td>
+</tr>
+<tr>
+<td>200515009</td>
+<td>王小民</td>
+<td>女</td>
+<td>18</td>
+<td>MA</td>
+</tr>
+<tr>
+<td>200515010</td>
+<td>李辰</td>
+<td>女</td>
+<td>22</td>
+<td>MA</td>
+</tr>
+<tr>
+<td>200515011</td>
+<td>张毅</td>
+<td>男</td>
+<td>20</td>
+<td>WM</td>
+</tr>
+<tr>
+<td>200515012</td>
+<td>杨磊</td>
+<td>女</td>
+<td>20</td>
+<td>EN</td>
+</tr>
+<tr>
+<td>200515013</td>
+<td>李晨</td>
+<td>女</td>
+<td>19</td>
+<td>MA</td>
+</tr>
+<tr>
+<td>200515014</td>
+<td>张丰毅</td>
+<td>男</td>
+<td>22</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>200515015</td>
+<td>李蕾</td>
+<td>女</td>
+<td>21</td>
+<td>EN</td>
+</tr>
+<tr>
+<td>200515016</td>
+<td>刘社</td>
+<td>男</td>
+<td>21</td>
+<td>CM</td>
+</tr>
+<tr>
+<td>200515017</td>
+<td>刘星耀</td>
+<td>男</td>
+<td>18</td>
+<td>CM</td>
+</tr>
+<tr>
+<td>200515018</td>
+<td>李贵</td>
+<td>男</td>
+<td>19</td>
+<td>EN</td>
+</tr>
+<tr>
+<td>200515019</td>
+<td>林自许</td>
+<td>男</td>
+<td>20</td>
+<td>WM</td>
+</tr>
+<tr>
+<td>200515020</td>
+<td>马翔</td>
+<td>男</td>
+<td>21</td>
+<td></td>
+</tr>
+<tr>
+<td>200515021</td>
+<td>刘峰</td>
+<td>男</td>
+<td>25</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>200515022</td>
+<td>牛站强</td>
+<td>男</td>
+<td>22</td>
+<td></td>
+</tr>
+<tr>
+<td>200515023</td>
+<td>李婷婷</td>
+<td>女</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>200515024</td>
+<td>严丽</td>
+<td>女</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>200515025</td>
+<td>朱小鸥</td>
+<td>女</td>
+<td>30</td>
+<td>WM</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Cno</th>
+<th>Cname</th>
+<th>Cpno</th>
+<th>Ccredit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>数据库</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>数学</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>信息系统</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>操作系统</td>
+<td>6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>数据结构</td>
+<td>7</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>数据处理</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>PASCAL语言</td>
+<td>6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>大学英语</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>9</td>
+<td>计算机网络</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>10</td>
+<td>人工智能</td>
+<td></td>
+<td>2</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Sno</th>
+<th>Cno</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200515001</td>
+<td>1</td>
+<td>75</td>
+</tr>
+<tr>
+<td>200515002</td>
+<td>1</td>
+<td>85</td>
+</tr>
+<tr>
+<td>200515002</td>
+<td>3</td>
+<td>53</td>
+</tr>
+<tr>
+<td>200515003</td>
+<td>1</td>
+<td>86</td>
+</tr>
+<tr>
+<td>200515004</td>
+<td>1</td>
+<td>74</td>
+</tr>
+<tr>
+<td>200515005</td>
+<td>1</td>
+<td>58</td>
+</tr>
+<tr>
+<td>200515006</td>
+<td>1</td>
+<td>84</td>
+</tr>
+<tr>
+<td>200515004</td>
+<td>2</td>
+<td>46</td>
+</tr>
+<tr>
+<td>200515005</td>
+<td>2</td>
+<td>89</td>
+</tr>
+<tr>
+<td>200515006</td>
+<td>2</td>
+<td>65</td>
+</tr>
+<tr>
+<td>200515008</td>
+<td>2</td>
+<td>72</td>
+</tr>
+<tr>
+<td>200515009</td>
+<td>2</td>
+<td>76</td>
+</tr>
+<tr>
+<td>200515010</td>
+<td>2</td>
+<td>96</td>
+</tr>
+<tr>
+<td>200515010</td>
+<td>8</td>
+<td>86</td>
+</tr>
+<tr>
+<td>200515011</td>
+<td>8</td>
+<td>62</td>
+</tr>
+<tr>
+<td>200515015</td>
+<td>8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>200515018</td>
+<td>8</td>
+<td>58</td>
+</tr>
+<tr>
+<td>200515001</td>
+<td>4</td>
+<td>62</td>
+</tr>
+<tr>
+<td>200515002</td>
+<td>4</td>
+<td>85</td>
+</tr>
+<tr>
+<td>200515021</td>
+<td>9</td>
+<td>54</td>
+</tr>
+<tr>
+<td>200515001</td>
+<td>5</td>
+<td>58</td>
+</tr>
+<tr>
+<td>200515021</td>
+<td>6</td>
+<td>58</td>
+</tr>
+<tr>
+<td>200515001</td>
+<td>7</td>
+<td>70</td>
+</tr>
+<tr>
+<td>200515005</td>
+<td>10</td>
+<td>65</td>
+</tr>
+<tr>
+<td>200515016</td>
+<td>8</td>
+<td>Null</td>
+</tr>
+<tr>
+<td>200515017</td>
+<td>8</td>
+<td>Null</td>
+</tr>
+</tbody></table>
+<p>3、在SPJ数据库中使用SQL Server Management Studio（图形界面方式）建立课本第二章习题5中的四个表，并输入数据。（可以使用实验中提供的Excel文件，进行数据的导入）</p>
+<p>4、 修改student表结构，为该表增加phone和e_mail两个属性列</p>
+<p>5、 将student表的专业属性列数据类型改为变长字符串类型，长度为20</p>
+<p>8、 删除student表的phone属性列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Student<br>(Sno <span class="hljs-type">CHAR</span>(<span class="hljs-number">9</span>) <span class="hljs-keyword">PRIMARY</span> KEY,<br>Sname <span class="hljs-type">CHAR</span>(<span class="hljs-number">20</span>),<br>Ssex <span class="hljs-type">CHAR</span>(<span class="hljs-number">2</span>) <span class="hljs-keyword">CHECK</span> (Ssex <span class="hljs-keyword">IN</span>(<span class="hljs-string">&#x27;女&#x27;</span>,<span class="hljs-string">&#x27;男&#x27;</span>)),<br>Sage <span class="hljs-type">SMALLINT</span>,<br>Sdept <span class="hljs-type">CHAR</span>(<span class="hljs-number">20</span>)<br>);<br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Course<br>(Cno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>) <span class="hljs-keyword">PRIMARY</span> KEY,<br>Cname <span class="hljs-type">CHAR</span>(<span class="hljs-number">40</span>),<br>Cpno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>),<br>Ccredit <span class="hljs-type">SMALLINT</span>,<br><span class="hljs-keyword">FOREIGN</span> KEY(Cpno)<span class="hljs-keyword">REFERENCES</span> Course(Cno)<br>);<br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> SC<br>(Sno <span class="hljs-type">CHAR</span>(<span class="hljs-number">9</span>),<br>Cno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>),<br>Grade <span class="hljs-type">SMALLINT</span>,<br><span class="hljs-keyword">PRIMARY</span> KEY(Sno,Cno),<br><span class="hljs-keyword">FOREIGN</span> KEY(Sno)<span class="hljs-keyword">REFERENCES</span> Student(Sno),<br><span class="hljs-keyword">FOREIGN</span> KEY(Cno)<span class="hljs-keyword">REFERENCES</span> Course(Cno)<br>);<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student<br><span class="hljs-keyword">ADD</span> Phone <span class="hljs-type">INT</span>;<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student<br><span class="hljs-keyword">ADD</span> E_mail <span class="hljs-type">CHAR</span>(<span class="hljs-number">100</span>);<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student <br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">COLUMN</span> Sdept <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>);<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student<br><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">COLUMN</span> Phone;<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/10/21/DataBase2/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">数据库实验-2</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="/img/img5.jpg"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/10/18/CCPC-3/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">2021CCPC模拟赛3</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/img/avator.png" class="soft-size--round soft-style--box" alt="STERNE">
+    
+    
+      <h2>STERNE</h2>
+    
+    
+      <p>SDUer，大一入门，大二入土...</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>36</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        18
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>这里还什么都没有呢喵~</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">
+            帮助文档 (3)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/ACM/" style="font-size: 16.67px;" class="tags-cloud-7">ACM</a> <a href="/tags/Arc/" style="font-size: 10px;" class="tags-cloud-0">Arc</a> <a href="/tags/Arknights/" style="font-size: 10px;" class="tags-cloud-0">Arknights</a> <a href="/tags/CCPC/" style="font-size: 15px;" class="tags-cloud-5">CCPC</a> <a href="/tags/DataStructres/" style="font-size: 10px;" class="tags-cloud-0">DataStructres</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 11.67px;" class="tags-cloud-2">c</a> <a href="/tags/c/" style="font-size: 20px;" class="tags-cloud-10">c++</a> <a href="/tags/games/" style="font-size: 13.33px;" class="tags-cloud-3">games</a> <a href="/tags/hexo/" style="font-size: 10px;" class="tags-cloud-0">hexo</a> <a href="/tags/java/" style="font-size: 10px;" class="tags-cloud-0">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/note/" style="font-size: 11.67px;" class="tags-cloud-2">note</a> <a href="/tags/python/" style="font-size: 11.67px;" class="tags-cloud-2">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/review/" style="font-size: 16.67px;" class="tags-cloud-7">review</a> <a href="/tags/sql/" style="font-size: 18.33px;" class="tags-cloud-8">sql</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/sterne012" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/sterne012" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2022 <a href="/" target="_blank">sterne</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
