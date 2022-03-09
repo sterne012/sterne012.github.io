@@ -22,7 +22,7 @@
 
   
 
-  <title>links | Welcome -Sterne&#39;s Blog-</title>
+  <title>修 网 大 胜 利 | Welcome -Sterne&#39;s Blog-</title>
 
   
 
@@ -44,7 +44,7 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
     <div class="post-image" style="background-image: url(/img/cover.jpg)"></div>
   
@@ -94,38 +94,102 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">links</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">修 网 大 胜 利</h1>
+          <h2 class="title-sub-wrap">
+            <strong>sterne</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-03-09T07:32:21.000Z" itemprop="datePublished">2022-03-09</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">📒 帮助文档</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/hexo/">🏷️ hexo</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>npy的cnblog（人在计院，心在数学（那我呢？））：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/sora-13">https://www.cnblogs.com/sora-13</a></p>
-<p>巨佬火星大王手搓的网站（超越时代的ui设计，带给您别样的体验（据他自己说））：<a target="_blank" rel="noopener" href="http://www.juruoyun.top/">http://www.juruoyun.top/</a></p>
+        <p>简而言之，开学之后突然发现上传不了，在3/9即arc5th周年的这天修网1h后终于复活</p>
+<p>原因大概是寒假时候换了梯子</p>
+<p>首先换sshkey</p>
+<p><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p>
+<p>在<code>C:\Users\用户名\.ssh</code>下的<code>id_rsa.pub</code>中内容到settings-keys-add deploy key，新建，勾选可修改</p>
+<p>然后git运行</p>
+<p><code>ssh -T git@github.com</code></p>
+<p>这才真正开始修网</p>
+<h3 id="1-ssh-Could-not-resolve-hostname-github-com-Name-or-service-not-known"><a href="#1-ssh-Could-not-resolve-hostname-github-com-Name-or-service-not-known" class="headerlink" title="1.ssh: Could not resolve hostname github.com: Name or service not known"></a>1.<code>ssh: Could not resolve hostname github.com: Name or service not known</code></h3><p>ping github.com发现ping命令用不了，然后去搜添加环境变量（也许是装什么东西的时候不小心删了吧）</p>
+<p>装好ping之后<del>发现请求超时</del>挂梯子连得到github的ip</p>
+<p>用管理员权限运行任意文本编辑软件修改<code>C:\Windows\System32\drivers\etc</code>目录下的hosts，在最后一行添加</p>
+<p><code>xxx.xxx.xxx.xxx github.com</code>（就是ping到ip）</p>
+<p>这算第一步弄完，再次尝试<code>ssh -T git@github.com</code></p>
+<h3 id="2-ssh-connect-to-host-github-com-port-22-Connection-timed-out"><a href="#2-ssh-connect-to-host-github-com-port-22-Connection-timed-out" class="headerlink" title="2.ssh: connect to host github.com port 22: Connection timed out"></a>2.<code>ssh: connect to host github.com port 22: Connection timed out</code></h3><p>在<code>C:\Users\用户名\.ssh</code>下添加<code>config</code>文件（没有后缀名）</p>
+<p>内容：</p>
+<p>Host github.com<br>User git<br>Hostname ssh.github.com<br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port 443</p>
+<p>（意思应该是使用443端口什么的）</p>
+<p>尝试<code>ssh -T git@github.com</code>，提示有一个修改什么的没截图，yes回车</p>
+<p>然后就行了</p>
 
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2022/01/17/py-cifar100-train/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">cifar100电脑跑不动啊不中用啊</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -162,6 +226,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -213,7 +279,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
