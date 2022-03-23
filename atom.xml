@@ -6,7 +6,7 @@
   <link href="https://github.com/sterne012/sterne012.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/sterne012/sterne012.github.io/"/>
-  <updated>2022-03-22T09:19:40.182Z</updated>
+  <updated>2022-03-23T06:47:34.757Z</updated>
   <id>https://github.com/sterne012/sterne012.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习-手写数字识别</title>
+    <link href="https://github.com/sterne012/sterne012.github.io/2022/03/23/deep-digit-reco/"/>
+    <id>https://github.com/sterne012/sterne012.github.io/2022/03/23/deep-digit-reco/</id>
+    <published>2022-03-23T06:46:28.000Z</published>
+    <updated>2022-03-23T06:47:34.757Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单贴一下代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf<br><span class="hljs-keyword">from</span> tensorflow.keras <span class="hljs-keyword">import</span> layers, optimizers, datasets, Sequential<br><span class="hljs-keyword">from</span> tensorflow.keras.layers <span class="hljs-keyword">import</span> Dense, Dropout, Activation<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-keyword">import</span> os<br><br><span class="hljs-keyword">from</span> tensorflow.python.keras.optimizer_v2.gradient_descent <span class="hljs-keyword">import</span> SGD<br><span class="hljs-keyword">from</span> tensorflow.python.keras.utils <span class="hljs-keyword">import</span> np_utils<br><br>os.environ[<span class="hljs-string">&#x27;TF_CPP_MIN_LOG_LEVEL&#x27;</span>] = <span class="hljs-string">&#x27;2&#x27;</span><br>os.environ[<span class="hljs-string">&quot;KMP_DUPLICATE_LIB_OK&quot;</span>] = <span class="hljs-string">&quot;TRUE&quot;</span><br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_data</span>(<span class="hljs-params">path</span>):</span><br>    f = np.load(path)<br>    x_train, y_train = f[<span class="hljs-string">&#x27;x_train&#x27;</span>], f[<span class="hljs-string">&#x27;y_train&#x27;</span>]<br>    x_test, y_test = f[<span class="hljs-string">&#x27;x_test&#x27;</span>], f[<span class="hljs-string">&#x27;y_test&#x27;</span>]<br>    f.close()<br>    x_train = x_train.reshape(x_train.shape[<span class="hljs-number">0</span>], <span class="hljs-number">28</span> * <span class="hljs-number">28</span>)<br>    x_test = x_test.reshape(x_test.shape[<span class="hljs-number">0</span>], <span class="hljs-number">28</span> * <span class="hljs-number">28</span>)<br>    x_train = x_train.astype(<span class="hljs-string">&#x27;float32&#x27;</span>)<br>    x_test = x_test.astype(<span class="hljs-string">&#x27;float32&#x27;</span>)<br>    y_train = np_utils.to_categorical(y_train, <span class="hljs-number">10</span>)<br>    y_test = np_utils.to_categorical(y_test, <span class="hljs-number">10</span>)<br>    x_train = x_train / <span class="hljs-number">255</span><br>    x_test = x_test / <span class="hljs-number">255</span><br>    <span class="hljs-keyword">return</span> (x_train, y_train), (x_test, y_test)<br><br><br>(x_train, y_train), (x_test, y_test) = load_data(path=<span class="hljs-string">&#x27;mnist.npz&#x27;</span>)<br><br><span class="hljs-comment"># 输出少量测试集结果</span><br><span class="hljs-comment"># print(x_train.shape)</span><br><span class="hljs-comment"># print(x_train[0])</span><br><span class="hljs-comment"># print(y_train.shape)</span><br><span class="hljs-comment"># print(y_train[0])</span><br><span class="hljs-comment"># plt.Figure()</span><br><span class="hljs-comment"># for i in range(10):</span><br><span class="hljs-comment">#     im = x_train[i].reshape(28, 28)</span><br><span class="hljs-comment">#     plt.imshow(im, &#x27;gray&#x27;)</span><br><span class="hljs-comment">#     print(y_train[i])</span><br><span class="hljs-comment">#     plt.pause(0.5)</span><br><span class="hljs-comment"># plt.show()</span><br><br>model = Sequential()<br>model.add(Dense(input_dim=<span class="hljs-number">28</span> * <span class="hljs-number">28</span>, units=<span class="hljs-number">500</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>))<br>model.add(Dense(units=<span class="hljs-number">500</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>))<br>model.add(Dense(units=<span class="hljs-number">500</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>))<br>model.add(Dense(units=<span class="hljs-number">10</span>, activation=<span class="hljs-string">&#x27;softmax&#x27;</span>))<br><br>model.<span class="hljs-built_in">compile</span>(loss=<span class="hljs-string">&#x27;categorical_crossentropy&#x27;</span>, optimizer=SGD(lr=<span class="hljs-number">0.1</span>), metrics=[<span class="hljs-string">&#x27;accuracy&#x27;</span>])<br><br>model.fit(x_train, y_train, batch_size=<span class="hljs-number">100</span>, epochs=<span class="hljs-number">20</span>)<br><br>result = model.evaluate(x_test, y_test)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\nTest loss:&#x27;</span>, result[<span class="hljs-number">0</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\nTest Accuracy:&#x27;</span>, result[<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;简单贴一下代码&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span</summary>
+      
+    
+    
+    
+    
+    <category term="python" scheme="https://github.com/sterne012/sterne012.github.io/tags/python/"/>
+    
+    <category term="deeplearning" scheme="https://github.com/sterne012/sterne012.github.io/tags/deeplearning/"/>
+    
+  </entry>
   
   <entry>
     <title>Arcaea-从零开始的玩蛇生活</title>
@@ -481,31 +506,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;1-状态压缩dp&quot;&gt;&lt;a href=&quot;#1-状态压缩dp&quot; class=&quot;headerlink&quot; title=&quot;1.状态压缩dp&quot;&gt;&lt;/a&gt;1.状态压缩dp&lt;/h2&gt;&lt;h2 id=&quot;2-背包&quot;&gt;&lt;a href=&quot;#2-背包&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    
-    <category term="c++" scheme="https://github.com/sterne012/sterne012.github.io/tags/c/"/>
-    
-    <category term="ACM" scheme="https://github.com/sterne012/sterne012.github.io/tags/ACM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ACM-String</title>
-    <link href="https://github.com/sterne012/sterne012.github.io/2021/11/23/ACM-String/"/>
-    <id>https://github.com/sterne012/sterne012.github.io/2021/11/23/ACM-String/</id>
-    <published>2021-11-23T02:27:41.000Z</published>
-    <updated>2021-11-23T02:48:46.859Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-KMP"><a href="#1-KMP" class="headerlink" title="1.KMP"></a>1.KMP</h2><p><del>看 猫 片</del></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn=<span class="hljs-number">1e4</span>+<span class="hljs-number">7</span>;<br><span class="hljs-keyword">int</span> kmp[maxn];<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">kmp_pre</span><span class="hljs-params">(<span class="hljs-keyword">char</span> x[],<span class="hljs-keyword">int</span> m)</span></span>&#123;<br>    <span class="hljs-keyword">int</span> i,j;<br>    j=kmp[<span class="hljs-number">0</span>]=<span class="hljs-number">-1</span>;<br>    i=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(i&lt;m)&#123;<br>        <span class="hljs-keyword">while</span>(j!=<span class="hljs-number">-1</span>&amp;&amp;x[i]!=x[j]) j=kmp[j];<br>        kmp[++i]=++j;<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">kmp_count</span><span class="hljs-params">(<span class="hljs-keyword">char</span> x[],<span class="hljs-keyword">int</span> m,<span class="hljs-keyword">char</span> y[],<span class="hljs-keyword">int</span> n)</span></span>&#123;<br>    <span class="hljs-keyword">int</span> i,j;<br>    <span class="hljs-built_in">kmp_pre</span>(x,m);<br>    i=j=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(i&lt;n)&#123;<br>        <span class="hljs-keyword">while</span>(j!=<span class="hljs-number">-1</span>&amp;&amp;y[i]!=x[j]) j=kmp[j];<br>        i++;j++;<br>        <span class="hljs-keyword">if</span>(j&gt;=m)&#123;<br>            <span class="hljs-keyword">return</span> i-j+<span class="hljs-number">1</span>;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;1-KMP&quot;&gt;&lt;a href=&quot;#1-KMP&quot; class=&quot;headerlink&quot; title=&quot;1.KMP&quot;&gt;&lt;/a&gt;1.KMP&lt;/h2&gt;&lt;p&gt;&lt;del&gt;看 猫 片&lt;/del&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;</summary>
       
     
     
