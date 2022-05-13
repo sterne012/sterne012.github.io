@@ -200,14 +200,16 @@
 <p>关系模式：对关系的描述 Student(sno,sname,ssex,sdept,sage…)</p>
 <h4 id="※关系的完整性约束"><a href="#※关系的完整性约束" class="headerlink" title="※关系的完整性约束"></a>※关系的完整性约束</h4><h5 id="实体完整性"><a href="#实体完整性" class="headerlink" title="实体完整性"></a>实体完整性</h5><h5 id="参照完整性"><a href="#参照完整性" class="headerlink" title="参照完整性"></a>参照完整性</h5><h5 id="用户定义的完整性"><a href="#用户定义的完整性" class="headerlink" title="用户定义的完整性"></a>用户定义的完整性</h5><h4 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h4><p>优点：建立在严格的数学概念基础上；概念单一；存取路径对用户透明</p>
 <p>缺点：查询效率不如非关系数据模型；对用户请求进行优化提高了DBMS开发难度</p>
-<h4 id="E-R模型到关系模型转化"><a href="#E-R模型到关系模型转化" class="headerlink" title="E-R模型到关系模型转化"></a>E-R模型到关系模型转化</h4><table>
+<h4 id="E-R模型到关系模型转化"><a href="#E-R模型到关系模型转化" class="headerlink" title="E-R模型到关系模型转化"></a>E-R模型到关系模型转化</h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>E-R模型</th>
 <th>关系模型</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>实体 属性 码</td>
 <td>关系 属性 码</td>
 </tr>
@@ -223,13 +225,14 @@
 <td>m：n</td>
 <td>转换为一个关系模式</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="1-3数据库系统结构"><a href="#1-3数据库系统结构" class="headerlink" title="1.3数据库系统结构"></a>1.3数据库系统结构</h2><h3 id="1-3-1数据库系统模式的概念"><a href="#1-3-1数据库系统模式的概念" class="headerlink" title="1.3.1数据库系统模式的概念"></a>1.3.1数据库系统模式的概念</h3><p>型type：对值的抽象类型</p>
 <p>值value：型的具体值</p>
 <p>模式schema：型的描述</p>
 <p>实例instance：模式的具体值</p>
 <h3 id="1-3-2数据库三级模式结构"><a href="#1-3-2数据库三级模式结构" class="headerlink" title="1.3.2数据库三级模式结构"></a>1.3.2数据库三级模式结构</h3><img src="/2021/12/18/sqlReview/AA8C70DC2A3A31D2117B6C2F9ADCFF22.png" class="" title="img">
-
 <h4 id="内模式（存储模式）"><a href="#内模式（存储模式）" class="headerlink" title="内模式（存储模式）"></a>内模式（存储模式）</h4><p>数据物理结构和存储方式的描述，在数据库内部的表示方式</p>
 <p><strong>一个数据库只有一个内模式</strong></p>
 <p>存储方式（顺序？B树？hash？）</p>
@@ -263,7 +266,6 @@
 <p>保证数据物理独立性：存储结构改变，修改映像，使模式不变；从而外模式、应用程序不必修改</p>
 <h2 id="1-4数据库系统组成"><a href="#1-4数据库系统组成" class="headerlink" title="1.4数据库系统组成"></a>1.4数据库系统组成</h2><h3 id="硬件平台及数据库"><a href="#硬件平台及数据库" class="headerlink" title="硬件平台及数据库"></a>硬件平台及数据库</h3><p>足够大的内外存，较高的通道能力，提高数据传送率</p>
 <h3 id="软件：DBMS"><a href="#软件：DBMS" class="headerlink" title="软件：DBMS"></a>软件：DBMS</h3><h3 id="人员"><a href="#人员" class="headerlink" title="人员"></a>人员</h3><img src="/2021/12/18/sqlReview/0C46E2209A9A5AB1BF0B487973EF0C90.png" class="" title="img">
-
 <h4 id="数据库管理员"><a href="#数据库管理员" class="headerlink" title="数据库管理员"></a>数据库管理员</h4><p>决定数据库中信息内容和结构</p>
 <p>存储结构和存取策略</p>
 <p>安全性要求和完整性约束条件</p>
@@ -314,7 +316,12 @@
 <p>算数运算符（加减乘除，比较大小）</p>
 <p>逻辑运算符（与或非）</p>
 <p>元组的连接</p>
-<p>象集<br>$$<br>选择：\sigma_{Sage&lt;20}(Student) \<br>投影：\pi_{Sname,Sdept}(Student)\<br>(关系的)连接：R\Join_{R.a=S.a} S\<br>除：R\div S<br>$$<br>自然连接：连有一个属性列相等的</p>
+<p>象集</p>
+<script type="math/tex; mode=display">
+选择：\sigma_{Sage<20}(Student) \\
+投影：\pi_{Sname,Sdept}(Student)\\
+(关系的)连接：R\Join_{R.a=S.a} S\\
+除：R\div S</script><p>自然连接：连有一个属性列相等的</p>
 <p>连接还有左外连接、右外连接、全外连接（左+右），外连接其他属性上填NULL</p>
 <p>关系代数不能表达：最大最小值，排序，模糊查询</p>
 <p>没了！</p>
@@ -422,7 +429,6 @@
 <h4 id="模式对象事件"><a href="#模式对象事件" class="headerlink" title="模式对象事件"></a>模式对象事件</h4><p>对特定模式对象（?）上进行的SELECT或DML操作的审计</p>
 <h3 id="审计功能"><a href="#审计功能" class="headerlink" title="审计功能"></a>审计功能</h3><p>不是很懂诶</p>
 <img src="/2021/12/18/sqlReview/739EE19E97F381466E58E432FC2AA67D.png" class="" title="img">
-
 <h3 id="审计分类"><a href="#审计分类" class="headerlink" title="审计分类"></a>审计分类</h3><h4 id="用户级审计"><a href="#用户级审计" class="headerlink" title="用户级审计"></a>用户级审计</h4><p>针对自己创建的数据库表视图进行审计</p>
 <p>记录所有用户的一切成功和不成功访问要求以及各种类型的SQL操作</p>
 <h4 id="系统级审计"><a href="#系统级审计" class="headerlink" title="系统级审计"></a>系统级审计</h4><p>DBA设置(DATABASE ADMIN)</p>
@@ -678,7 +684,6 @@
 <p>多粒度封锁-多粒度树：以树形姐欧股表示多级封锁粒度</p>
 <p>三级粒度树</p>
 <img src="/2021/12/18/sqlReview/883442E5FF633936573008FD3C6B1BCB.png" class="" title="img">
-
 <ol>
 <li>每个节点可独立加锁</li>
 <li>对一个节点加锁意味着这个节点所有子树节点也加同样类型的锁</li>
@@ -698,7 +703,6 @@
 <p>都与X不相容</p>
 <p>锁的强度是如图所示的偏序关系</p>
 <img src="/2021/12/18/sqlReview/2E41006F05EF79212F75208A7509771B.png" class="" title="img">
-
 <p>优点：提高并发度，减少加锁解锁的开销</p>
 
       </section>
@@ -770,7 +774,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>48</span>
+        <span>50</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -833,7 +837,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/ACM/" style="font-size: 16.25px;" class="tags-cloud-6">ACM</a> <a href="/tags/Arc/" style="font-size: 11.25px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 15px;" class="tags-cloud-5">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 12.5px;" class="tags-cloud-3">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 16.25px;" class="tags-cloud-6">deeplearning</a> <a href="/tags/games/" style="font-size: 13.75px;" class="tags-cloud-4">games</a> <a href="/tags/hexo/" style="font-size: 11.25px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 10px;" class="tags-cloud-0">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/note/" style="font-size: 11.25px;" class="tags-cloud-1">note</a> <a href="/tags/python/" style="font-size: 17.5px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16.25px;" class="tags-cloud-6">review</a> <a href="/tags/sql/" style="font-size: 18.75px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
+      <a href="/tags/ACM/" style="font-size: 15px;" class="tags-cloud-5">ACM</a> <a href="/tags/Arc/" style="font-size: 11.25px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 13.75px;" class="tags-cloud-4">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 12.5px;" class="tags-cloud-3">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 16.25px;" class="tags-cloud-6">deeplearning</a> <a href="/tags/games/" style="font-size: 12.5px;" class="tags-cloud-3">games</a> <a href="/tags/hexo/" style="font-size: 11.25px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 10px;" class="tags-cloud-0">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/note/" style="font-size: 11.25px;" class="tags-cloud-1">note</a> <a href="/tags/python/" style="font-size: 17.5px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16.25px;" class="tags-cloud-6">review</a> <a href="/tags/sql/" style="font-size: 18.75px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
     </div>
   </div>
 </section>
