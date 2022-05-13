@@ -139,16 +139,18 @@
 <li><p>光变曲线特征提取</p>
 <p>提取变星周期使用的方法为周期图，其核心思想为傅里叶变换，该方法同样适用于恒星星震信号、恒星自转信号的搜索。傅立叶变换是一种线性的积分变换，常用 来对信号进行时域到频域的处理，对光变数据的傅立叶分析就是一个从时域到频域的 变换．我们使用Lom-Scargle(L-S)周期图和Box Least Squares(BLS)周期图法，其中L-S周期图(Lomb-Scargle)算法能很好地检测和提 取不均匀采样时域中的周期性，并且在不同学科的时序分析中得到了广泛的应用，它允许对不均匀采样的数据进行傅里叶变换，从而可以直观地表征光变周期.在L-S算法中， 只有时间序列中t时刻为实测值时才对光变数据进行处理，如果序列yi(ti)由N个数据点构成，将角频率w&gt;0位变量的L-S周期频谱用Px来表示，则根据Lomb和Scargle的工作，可以按下式对Px进行计算：</p>
 <img src="/2022/04/15/SRTP/image-20220419200514604.png" class="" title="image-20220419200514604">
+
 <p>另一种方法是BLS周期图，当凌星过程占行星轨道周期的比例较小时，BLS周期图 更加精确，对较长周期行星凌星使用BLS周期图法，利用该方法相较于L-S周期图可以找到更准确的信号峰值。（唐延柯、盖宁et al,2021,TESS空间卫星单扇区变星的周期性研究）</p>
 </li>
 <li><p>K-Means聚类方法属于迭代算法，根据分类个数随机生成相应个数的聚类中心，然后进入内循环，不断重复簇分配和移动聚类中心两个步骤，原则上靠近哪个聚类中心就被分为哪一类，可以用颜色区分标记，再移动聚类中心置属于该聚类中心的特征类的均值中心，簇分配和移动聚类中心的过程就是在不断地最小化代价函数。(Zafiirah Hosenie,Robert Lyon, Benjamin Stappers, Arrykrishna Mootoovaloo, 2019, Comparing Multi-class, Binary and Hierarchical Machine Learning Classification schemes for variable stars)</p>
 </li>
 <li><p>主成分分析方法（PCA）主要是通过数据压缩，或者说降维的方法来加速学习过程，通过数据可视化、均值归一化和特征规范化的方法使得均值为0，且数值在可比较的范围内，就此寻找低维平面，将数据投影使得数据到平面的距离的平方（投影误差）最短；独立成分分析方法（ICA）同样用于降维，但相较于PCA多了独立性。在不同样本重叠的时候，ICA的特征分离效果更显著，效率更高。(Suman Paul, Tanuka Chattopadhyay, 2022, Structural properties and classification of variable stars: A study through unsupervised machine learning techniques)</p>
 </li>
-<li><p>SOM算法将一个N维的数据集（由N个估计值或参数组成）还原成一个由mxn个单元组成的二维网格。这使得SOM成为可视化高维数据集中相关关系的有力工具。SOM优势在于，它不仅能够稳健地识别给定AGN数据集中的可变光曲线，而且也是研究多维空间中物理参数之间相关性的工具—例如AGN可变性与其宿主星系属性之间的联系。(Faisst et al, 2019, How to Find Variable Active Galactic Nuclei with Machine Learning)</p>
+<li><p>SOM算法将一个N维的数据集（由N个估计值或参数组成）还原成一个由mxn个单元组成的二维网格。这使得SOM成为可视化高维数据集中相关关系的有力工具。SOM优势在于，它不仅能够稳健地识别给定AGN数据集中的可变光曲线，而且也是研究多维空间中物理参数之间相关性的工具–例如AGN可变性与其宿主星系属性之间的联系。(Faisst et al, 2019, How to Find Variable Active Galactic Nuclei with Machine Learning)</p>
 </li>
 <li><p>关于 SOM 的训练，其输入参数有两个，分别是影响 Kohonen 层中像素调整速率的初始学习率$\alpha_0$和影响组大小的初始学习半径$\sigma_0$。对于一系列迭代，将每个输入的相位曲线与 Kohonen 层进行比较，并最小化像素元素和相位曲线之间的差异，找到层中的最佳匹配像素，然后按照以下表达式（Kohonen 层为二维的情况）更新每个像素：</p>
 <img src="/2022/04/15/SRTP/image-20220420152120449.png" class="" title="image-20220420152120449">
+
 <p>其中：</p>
 <ul>
 <li>$m_{xy,k,new}$是相位曲线中元素$k$、坐标$x,y$处的像素值。</li>
@@ -157,6 +159,7 @@
 </ul>
 <p>&emsp;&emsp;对每个相位曲线执行该操作后，$\alpha$和$\sigma$将按照以下公式更新：</p>
 <img src="/2022/04/15/SRTP/image-20220420152137880.png" class="" title="image-20220420152137880">
+
 <p>其中：</p>
 <ul>
 <li>i 是当前迭代轮数。</li>

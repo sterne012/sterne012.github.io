@@ -136,6 +136,7 @@
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         <h2 id="1-快速幂"><a href="#1-快速幂" class="headerlink" title="1.快速幂"></a>1.快速幂</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function">ll <span class="hljs-title">binpow</span><span class="hljs-params">(ll a,ll b)</span></span>&#123;<br>    ll res=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span>(b&gt;<span class="hljs-number">0</span>)&#123;<br>        <span class="hljs-keyword">if</span>(b&amp;<span class="hljs-number">1</span>) res=res*a%mod;<br>        a=a*a%mod;<br>        b&gt;&gt;=<span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> res;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+
       </section>
 
       
