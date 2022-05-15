@@ -132,7 +132,10 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="1-数据库"><a href="#1-数据库" class="headerlink" title="1.数据库"></a>1.数据库</h1><h2 id="0-连接"><a href="#0-连接" class="headerlink" title="0.连接"></a>0.连接</h2><p>终于把sql server（以下sql均指sql server）修好了。。。</p>
+        <p>夏日重现的ed是真的耐听</p>
+<div class="aplayer-box" data-url='https://sterne012.github.io/pubilc/music/cadode - 回夏.mp3' data-name='回夏' data-artist='cadode' data-cover data-lrc data-lrcType='3' ></div>
+
+<h1 id="1-数据库"><a href="#1-数据库" class="headerlink" title="1.数据库"></a>1.数据库</h1><h2 id="0-连接"><a href="#0-连接" class="headerlink" title="0.连接"></a>0.连接</h2><p>终于把sql server（以下sql均指sql server）修好了。。。</p>
 <p>昨天弄了一下午，真的不想玩辣，觉得用mysql摆烂算了，然后发现mysql的触发器和tsql不会写，寄</p>
 <p>前段时间需求分析差不多的时候发现它从我的电脑上直接消失（一个什么配置管理器），然后正确的修复方法应该不是重装，或者不只是重装，在sql安装程序-&gt;维护-&gt;修复的地方修一下之后我才看到TCP/IP端口重现天日。。然后SSL什么的报错，改了jdbc里面的一段话（改的是idea里面jdbc的）</p>
 <blockquote>
@@ -163,16 +166,23 @@
 <li><p>```java<br>BeanUtils.populate(loginuser,map);</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs stata"><br>  使用时前端的name要和后端user类对象名一样，否则调试时卡死<br>  <br>- 实例化Servlet类异常<br><br>  我真服了，真的，我改了一下包名（就是开头S统一成小写s结果找不到这个类。。。）<br>  <br>- 找不到jstl包<br><br>  下载`jakarta-taglibs-standard-1.1.0`版本，将lib目录中两个jar都丢到项目lib目录<br>  <br>- <span class="hljs-keyword">input</span>找不到属性，属性值为空<br><br>  不要设置<span class="hljs-keyword">input</span>标签为disabled，设置为readonly就好<br><br>## 2.web代码(复制用)<br><br>```jsp<br>&lt;%@ page contentType=<span class="hljs-string">&quot;text/html; charset=UTF-8&quot;</span> pageEncoding=<span class="hljs-string">&quot;UTF-8&quot;</span> %&gt;<br>&lt;%@ taglib prefix=<span class="hljs-string">&quot;c&quot;</span> uri=<span class="hljs-string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span>%&gt;<br><br>	&lt;%@ <span class="hljs-keyword">include</span> <span class="hljs-keyword">file</span>=<span class="hljs-string">&quot;bootstrap.jsp&quot;</span>%&gt;<br>    &lt;title&gt;Login -<span class="hljs-keyword">EN</span> Learning Assistant-&lt;/title&gt;<br><br>&lt;c:<span class="hljs-keyword">if</span> <span class="hljs-keyword">test</span>=<span class="hljs-string">&quot;$&#123;not empty user&#125;&quot;</span>&gt;&lt;%@<span class="hljs-keyword">include</span> <span class="hljs-keyword">file</span>=<span class="hljs-string">&quot;user_nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br>&lt;c:<span class="hljs-keyword">if</span> <span class="hljs-keyword">test</span>=<span class="hljs-string">&quot;$&#123;empty user&#125;&quot;</span>&gt;&lt;%@<span class="hljs-keyword">include</span> <span class="hljs-keyword">file</span>=<span class="hljs-string">&quot;nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br><br><br>&lt;%@ <span class="hljs-keyword">include</span> <span class="hljs-keyword">file</span>=<span class="hljs-string">&quot;copyright.jsp&quot;</span>%&gt;<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="3-进度统计"><a href="#3-进度统计" class="headerlink" title="3.进度统计"></a>3.进度统计</h1><p>基本已经完成</p>
-<p>目前没做的功能：</p>
+<h1 id="3-进度统计"><a href="#3-进度统计" class="headerlink" title="3.进度统计"></a>3.进度统计</h1><p>目前没做的功能：</p>
 <ol>
-<li>lib&amp;用户表的分页(lib完成，用户表不想做了)</li>
-<li>点开始之后(完成)</li>
-<li>查询功能</li>
-<li>单词测试</li>
-<li>打卡</li>
-<li>用户表里边一堆小按钮</li>
-<li>单词表的vocal和img</li>
+<li><p>lib&amp;用户表的分页(lib完成，用户表不想做了)</p>
+</li>
+<li><p>点开始之后(完成)</p>
+</li>
+<li><p>查询功能</p>
+</li>
+<li><p>单词测试</p>
+</li>
+<li><p>打卡</p>
+</li>
+<li><p>用户表里边一堆小按钮</p>
+</li>
+<li><p>单词表的vocal和img</p>
+<p>突然想到办法去做这个，改成string类型存路径。输出之后放在img标签的src里就OK了；再简化一点甚至不用改底层，图片只要叫words.word.jpg就ok，好诶</p>
+</li>
 </ol>
 
       </section>
@@ -382,6 +392,34 @@
 
   
   <!-- aplayer -->
+
+
+  <!-- aplayer 音频 start -->
+  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <script type="text/javascript">
+    const aplayer = document.querySelectorAll(".aplayer-box");
+    aplayer && initaplayer(aplayer);
+    function initaplayer(els) {
+      let elsArr = Array.from(els);
+      elsArr.forEach(el => {
+        let params = {
+          container: el,
+          audio: { ...el.dataset },
+          theme: "#b7daff",
+          autoplay: false,
+          loop: false,
+          mutex: true,
+        }
+        if (el.dataset.lrc) {
+          params['lrcType'] = 3
+        }
+        new APlayer(params);
+      });
+    }
+  </script>
+  <!-- aplayer 音频 end -->
+  
 
 
 <!-- dplayer -->
