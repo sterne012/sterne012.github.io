@@ -132,9 +132,10 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>夏日重现的ed是真的耐听</p>
+        <p>夏日重现的ed是真的耐听(然而播放器还是失效了，悲)</p>
 <div class="aplayer-box" data-url='https://sterne012.github.io/pubilc/music/cadode - 回夏.mp3' data-name='回夏' data-artist='cadode' data-cover data-lrc data-lrcType='3' ></div>
 
+<p>做完之后会放到gayhub上开源嗯。。</p>
 <h1 id="1-数据库"><a href="#1-数据库" class="headerlink" title="1.数据库"></a>1.数据库</h1><h2 id="0-连接"><a href="#0-连接" class="headerlink" title="0.连接"></a>0.连接</h2><p>终于把sql server（以下sql均指sql server）修好了。。。</p>
 <p>昨天弄了一下午，真的不想玩辣，觉得用mysql摆烂算了，然后发现mysql的触发器和tsql不会写，寄</p>
 <p>前段时间需求分析差不多的时候发现它从我的电脑上直接消失（一个什么配置管理器），然后正确的修复方法应该不是重装，或者不只是重装，在sql安装程序-&gt;维护-&gt;修复的地方修一下之后我才看到TCP/IP端口重现天日。。然后SSL什么的报错，改了jdbc里面的一段话（改的是idea里面jdbc的）</p>
@@ -177,7 +178,7 @@
 <p>不要设置input标签为disabled，设置为readonly就好</p>
 </li>
 </ul>
-<h2 id="2-web代码-复制用"><a href="#2-web代码-复制用" class="headerlink" title="2.web代码(复制用)"></a>2.web代码(复制用)</h2><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs jsp">&lt;%@ page contentType=<span class="hljs-string">&quot;text/html; charset=UTF-8&quot;</span> pageEncoding=<span class="hljs-string">&quot;UTF-8&quot;</span> %&gt;<br>&lt;%@ taglib prefix=<span class="hljs-string">&quot;c&quot;</span> uri=<span class="hljs-string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span>%&gt;<br><br>	&lt;%@ include file=<span class="hljs-string">&quot;bootstrap.jsp&quot;</span>%&gt;<br>    &lt;title&gt;Login -EN Learning Assistant-&lt;/title&gt;<br><br>&lt;c:<span class="hljs-keyword">if</span> test=<span class="hljs-string">&quot;$&#123;not empty user&#125;&quot;</span>&gt;&lt;%<span class="hljs-meta">@include</span> file=<span class="hljs-string">&quot;user_nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br>&lt;c:<span class="hljs-keyword">if</span> test=<span class="hljs-string">&quot;$&#123;empty user&#125;&quot;</span>&gt;&lt;%<span class="hljs-meta">@include</span> file=<span class="hljs-string">&quot;nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br><br><br>&lt;%@ include file=<span class="hljs-string">&quot;copyright.jsp&quot;</span>%&gt;<br></code></pre></td></tr></table></figure>
+<h2 id="2-web代码-复制用"><a href="#2-web代码-复制用" class="headerlink" title="2.web代码(复制用)"></a>2.web代码(复制用)</h2><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs jsp">&lt;%@ page contentType=<span class="hljs-string">&quot;text/html; charset=UTF-8&quot;</span> pageEncoding=<span class="hljs-string">&quot;UTF-8&quot;</span> %&gt;<br>&lt;%@ taglib prefix=<span class="hljs-string">&quot;c&quot;</span> uri=<span class="hljs-string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span>%&gt;<br><br>&lt;%@ include file=<span class="hljs-string">&quot;bootstrap.jsp&quot;</span>%&gt;<br>&lt;title&gt;Login -EN Learning Assistant-&lt;/title&gt;<br>&lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span> src=<span class="hljs-string">&quot;js/jquery.js&quot;</span>&gt;&lt;/script&gt;<br>	&lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;&lt;/script&gt;<br><br><br>&lt;c:<span class="hljs-keyword">if</span> test=<span class="hljs-string">&quot;$&#123;not empty user&#125;&quot;</span>&gt;&lt;%<span class="hljs-meta">@include</span> file=<span class="hljs-string">&quot;user_nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br>&lt;c:<span class="hljs-keyword">if</span> test=<span class="hljs-string">&quot;$&#123;not empty admin&#125;&quot;</span>&gt;&lt;%<span class="hljs-meta">@include</span> file=<span class="hljs-string">&quot;admin_nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br>&lt;c:<span class="hljs-keyword">if</span> test=<span class="hljs-string">&quot;$&#123;empty user &amp;&amp; not empty admin&#125;&quot;</span>&gt;&lt;%<span class="hljs-meta">@include</span> file=<span class="hljs-string">&quot;nav.jsp&quot;</span>%&gt;&lt;/c:<span class="hljs-keyword">if</span>&gt;<br><br><br>&lt;%@ include file=<span class="hljs-string">&quot;copyright.jsp&quot;</span>%&gt;<br></code></pre></td></tr></table></figure>
 
 <h1 id="3-进度统计"><a href="#3-进度统计" class="headerlink" title="3.进度统计"></a>3.进度统计</h1><p>目前没做的功能：</p>
 <ol>
@@ -191,13 +192,40 @@
 </li>
 <li><p>用户表里边一堆小按钮(完成)</p>
 </li>
-<li><p>打卡</p>
+<li><p>打卡(完成，可能有一些bug)</p>
 </li>
-<li><p>单词测试</p>
+<li><p>单词测试（没做表单校验）</p>
 </li>
-<li><p>单词表的vocal和img</p>
+<li><p>单词表的vocal和img(实际试了，估计是不支持动态的路径吧，不行)(？！行了好耶，用了百词斩的一些图)</p>
 <p>突然想到办法去做这个，改成string类型存路径。输出之后放在img标签的src里就OK了；再简化一点甚至不用改底层，图片只要叫words.word.jpg就ok，好诶</p>
 </li>
+</ol>
+<p>完善&amp;优化：</p>
+<ol start="2">
+<li>打卡界面优化，打卡后的操作（完成）</li>
+<li>单词测试（完成，但是校验写的比较简单）</li>
+<li>单词的vocal</li>
+<li>数据库备份咋整（哇哦）</li>
+<li>我超你管理员还一点没写吧（蠕动）<ol>
+<li>哼哼啊啊啊啊啊登录（ok）</li>
+<li>个人信息（ok）</li>
+<li>登出（ok）</li>
+<li>单词修改（ok）</li>
+<li>单词删除（ok）</li>
+<li>单词添加（ok）</li>
+<li>用户查看（ok）</li>
+<li>用户修改（ko）</li>
+<li>用户注销（ko）</li>
+</ol>
+</li>
+<li>bug：用户从lib选取单词的时候没有校验？(好了)</li>
+<li>motto的随机</li>
+</ol>
+<p>bug：</p>
+<ol>
+<li>管理员信息没做返回键</li>
+<li>单词测试没有返回</li>
+<li><img src="/2022/04/21/tnndsql/image-20220531094926485.png" class="" title="image-20220531094926485">怎么会是呢</li>
 </ol>
 
       </section>
@@ -269,7 +297,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>49</span>
+        <span>52</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -344,7 +372,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/ACM/" style="font-size: 15.56px;" class="tags-cloud-6">ACM</a> <a href="/tags/Arc/" style="font-size: 11.11px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 14.44px;" class="tags-cloud-4">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 13.33px;" class="tags-cloud-3">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 16.67px;" class="tags-cloud-7">deeplearning</a> <a href="/tags/games/" style="font-size: 12.22px;" class="tags-cloud-2">games</a> <a href="/tags/hexo/" style="font-size: 11.11px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 10px;" class="tags-cloud-0">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/note/" style="font-size: 11.11px;" class="tags-cloud-1">note</a> <a href="/tags/python/" style="font-size: 17.78px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16.67px;" class="tags-cloud-7">review</a> <a href="/tags/sql/" style="font-size: 18.89px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
+      <a href="/tags/ACM/" style="font-size: 15px;" class="tags-cloud-5">ACM</a> <a href="/tags/Arc/" style="font-size: 11px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 14px;" class="tags-cloud-4">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 13px;" class="tags-cloud-3">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 17px;" class="tags-cloud-7">deeplearning</a> <a href="/tags/games/" style="font-size: 12px;" class="tags-cloud-2">games</a> <a href="/tags/hexo/" style="font-size: 11px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 10px;" class="tags-cloud-0">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/note/" style="font-size: 11px;" class="tags-cloud-1">note</a> <a href="/tags/python/" style="font-size: 18px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16px;" class="tags-cloud-6">review</a> <a href="/tags/sql/" style="font-size: 19px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
     </div>
   </div>
 </section>
