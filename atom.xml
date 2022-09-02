@@ -6,7 +6,7 @@
   <link href="https://github.com/sterne012/sterne012.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/sterne012/sterne012.github.io/"/>
-  <updated>2022-06-10T07:15:09.623Z</updated>
+  <updated>2022-06-26T03:45:46.222Z</updated>
   <id>https://github.com/sterne012/sterne012.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寄组成原理</title>
+    <link href="https://github.com/sterne012/sterne012.github.io/2022/06/26/cscomposition/"/>
+    <id>https://github.com/sterne012/sterne012.github.io/2022/06/26/cscomposition/</id>
+    <published>2022-06-26T00:24:47.000Z</published>
+    <updated>2022-06-26T03:45:46.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>要背的整理</p><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>摩尔定律：1965年摩尔，芯片上晶体管数量每年翻一番，1970年减慢成每18个月翻一番</p><p>计算机的性能指标：</p><ul><li>吞吐量TP</li><li>响应时间</li><li>处理机字长</li><li>总线宽度</li><li>存储器容量</li><li>存储器带宽 MB/s</li><li>主频/时钟周期</li><li>CPU执行时间：CPU时钟周期数xCPU时钟周期</li><li>CPI：每条指令周期数</li><li>MIPS：平均每秒执行多少百万条定点指令数</li><li>FLOPS：每秒执行浮点操作的次数，用来衡量机器浮点操作的性能</li></ul><p>硬件构成：运算器、控制器、存储器、输入输出设备、总线</p><p>冯诺依曼结构：存储程序并按地址顺序执行</p><p>取指周期-指令流，执行周期-数据流</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>原码和反码有+0和-0？什么的，补码只有0</p><p>奇校验C非=1、偶校验C=1</p><p>溢出：00正无溢出，01正溢出，10负溢出，11负无溢出</p><p>全加器&amp;进位加法器</p><p>浮点数运算：0操作数检查、对阶、尾数加减运算、结果规格化</p><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>程序的局部性原理：在某一段时间频繁访问某一局部的存储器空间，而对此范围以外的地址空间则很少访问的现象</p><p>时间局部性：最近被访问的信息很可能还要被访问</p><p>空间局部性：最近被访问的信息的临近地址信息可能被访问</p><p>多级存储器：cache、主存、外存</p><p>ROM只读，RAM随机（两者访问都是随机的）</p><p>存储容量=存储字数（存储单元数）x存储字长</p><p>1B=8bit</p><p>DRAM需要刷新：集中刷新、分散刷新、异步刷新</p><p>双端口存储器：两组相互独立的读写控制电路</p><p>多模块交叉存储器：顺序方式、交叉方式<br>$$<br>t=mT\<br>t=T+(m-1)t_0<br>$$<br>m：连续读取字数，T（一个字的）存储周期，t0总线传送周期</p><p>cache命中率P93</p><p>映射方式：全相联、直接映射、组相联</p><p>cache替换策略：LFU（换出访问次数最少）、LRU（换出长久未访问）、随机替换</p><p>cache写操作策略：写回法、全写法、写一次法</p><p>cache完全硬件完成，虚拟存储器需要软件（操作系统）配合</p><p>虚存：页式虚拟存储器，段式虚拟存储器、段页式虚拟存储器</p><h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p>指令格式：操作码OP、地址码字段</p><p>单字长指令：指令字长=机器字长</p><p>半字长指令：指令字长=机器字长/2</p><p>双字长指令：指令字长=机器字长*2</p><p>二地址指令中指令格式：RR型，SS型，RS型（操作数一个在寄存器，一个在存储器）</p><p>指令寻址方式：顺序寻址、跳跃寻址</p><p>操作数寻址方式：</p><ul><li><p>隐含寻址：操作数在专用寄存器</p></li><li><p>立即寻址：操作数=A</p></li><li><p>直接寻址：EA=A</p></li><li><p>间接寻址：EA=(A)</p></li><li><p>寄存器寻址：EA=R</p></li><li><p>寄存器间接寻址：EA=(R)</p></li><li><p>偏移寻址：EA=A+(R)</p><p>相对寻址：EA=A+(PC) 隐含的专用寄存器是PC</p><p>基址寻址：专用寄存器含有一个存储器地址（并行什么的？）</p><p>变址寻址：地址域引用一个主存地址（数组操作）</p></li><li><p>段寻址：EA=A+(R) 实质基址</p></li><li><p>堆栈寻址：EA=栈顶</p></li></ul><p>RISC/CISC特点</p><h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><p>CPU=运算器（ALU+DR+PSWR+通用寄存器）+控制器（PC+IR+OC操作控制器+指令译码器+时序产生器）</p><p>主要寄存器：DR数据缓冲寄存器、IR指令寄存器、PC程序计数器、AR数据地址寄存器、通用寄存器、PSWR程序状态字寄存器</p><p>数据通路：许多寄存器之间传送信息的通路</p><p>操作控制器：在各寄存器间建立数据通路</p><p>操作控制器分为硬布线控制器、微程序控制器</p><p>指令周期：取出一条指令并执行这条指令的时间</p><p>CPU周期=机器周期：用内存中读取一个字的最短时间规定CPU周期</p><p>时钟周期T：处理操作的最基本单位</p><p>单周期CPU：在一个T内完成从指令取出到得到结果的所有工作</p><p>多周期CPU：把指令执行分为多个阶段，每个阶段在一个时钟周期内完成，不同指令周期数可以不同</p><p>硬布线控制器时序信号：主状态周期-节拍电位-节拍脉冲</p><p>微程序控制器时序信号：节拍电位-节拍脉冲</p><p>时序信号控制方式：同步控制方式、异步控制方式、联合控制方式</p><p>微命令：控制部件通过控制线向执行部件发出各种控制命令</p><p>微操作：执行部件接收微命令后进行的操作</p><p>微指令：在一个CPU周期中，一组实现一定操作功能的微命令的组合</p><p>微程序：一条机器指令的功能是多条微指令组成的序列实现的，这个微指令序列称为微程序</p><p>相容性微操作：一个CPU周期内可以并行执行的微操作；相斥性微操作</p><p>微指令格式：水平型微指令（控制字段、判别测试字段、下地址字段）、垂直型微指令（指令功能简单，并行度差，实现一条微程序比水平型微指令编写的微程序长的多）</p><p>硬布线控制器：微操作控制信号C=指令操作码译码输出、时序信号、状态条件信号的逻辑函数</p><p>流水CPU：资源相关（争用同一部件冲突）（停顿一下再启动、增加存储器）、数据相关（SX锁RAW WAR WAW）（定向传送技术设置运算结果缓冲器）、控制相关（转移指令引起流水线断流）（延迟转移法、转移预测法）</p><h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><p>总线：内部总线（CPU内部）、系统总线、IO总线</p><p>单总线结构、多总线结构</p><p>系统总线：</p><ul><li>数据线（双向，传输数据）</li><li>地址线（单向，传送主存与设备的地址）：指定主存和IO设备接口电路的地址</li><li>控制线（指明数据传送方向，中断控制和定时控制）：提供主存、IO接口设备的控制信号和相应信号</li></ul><p>信息传送方式：串行传送/异步通信（低位在前）、并行传送/同步通信（上高下低）</p><p>波特率：每秒钟传送的比特位bit数</p><p>对多个主设备提出的占用总线请求，一般采用<strong>优先级</strong>或<strong>公平策略</strong>进行仲裁，主方持续控制总线的时间称为<strong>总线占用期</strong></p><p>按照总线仲裁电路的位置不同分为集中式仲裁和分布式仲裁</p><p>集中式仲裁：链式查询方式（对电路故障最敏感）、计数器定时查询方式、独立请求方式（相应时间最快）</p><p>总线的定时：同步总线定时协定、异步……、半同步……、周期分列式……</p><p>总线数据传送方式：读写操作，块传送操作，写后读、读修改写操作，广播、广集操作</p><p>PCI是一个与处理器无关的<strong>高速外围总线</strong>，又是至关重要的层间总线。采用<strong>同步时序协议</strong>和<strong>集中式仲裁策略</strong>，具有<strong>自动配置</strong>能力</p><p>PCI总线的基本传输机制是猝发式传送，利用<strong>桥</strong>可以实现总线间的<strong>猝发式传送</strong>，使所有的存取都按CPU的需要出现在总线上。PCI允许<strong>多条总线并行工作</strong></p><h1 id="8"><a href="#8" class="headerlink" title="8"></a>8</h1><p>为了与CPU交互信息的方便，在IO接口内部一般要设置一些可以被CPU直接访问的寄存器，称为端口</p><p>端口：命令口、状态口、数据口</p><p>端口编址方式：统一编址方式、IO独立编址方式</p><p>IO接口与外设间的数据传送方式：</p><ul><li>无条件传送方式：速度极慢或简单的外围设备</li><li>应答方式（异步传送方式）：慢速或中速的外围设备</li><li>同步传送方式：高速的外设</li></ul><p>CPU与IO接口的数据传送方式：</p><ul><li>无条件传送方式</li><li>程序查询方式</li><li>程序中断方式</li><li>DMA（直接内存访问）方式</li><li>通道和输入/输出处理器</li></ul><p>中断是一种程序随机切换的方式，也叫异常</p><p>8.3</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;要背的整理&lt;/p&gt;
+&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;p&gt;摩尔定律：1965年摩尔，芯片上晶体管数量每年翻一番，1970年减慢成每18个月翻一番&lt;/p&gt;
+&lt;p&gt;计算机的性能指标：&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="review" scheme="https://github.com/sterne012/sterne012.github.io/tags/review/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库课设-英语学习助手</title>
@@ -498,35 +522,6 @@
     <category term="python" scheme="https://github.com/sterne012/sterne012.github.io/tags/python/"/>
     
     <category term="deeplearning" scheme="https://github.com/sterne012/sterne012.github.io/tags/deeplearning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hacking to The CS Homework</title>
-    <link href="https://github.com/sterne012/sterne012.github.io/2022/01/05/DSpta/"/>
-    <id>https://github.com/sterne012/sterne012.github.io/2022/01/05/DSpta/</id>
-    <published>2022-01-05T07:08:19.000Z</published>
-    <updated>2022-01-05T11:01:02.416Z</updated>
-    
-    <content type="html"><![CDATA[<p> 淦，错好多</p><blockquote><p>稀疏矩阵采用三元组存储的时候，一般需要一个行逻辑链接的顺序表，用以指出每一行的第一个非零元素在三元组中的位置。用这个顺序表的主要目的是为了___。</p><p>(2分)</p><p>A.节省存储空间</p><p>B.更清晰表示每行元素所在位置</p><p>C.更清晰表示每列元素所在位置</p><p>D.加快算法运行效率</p></blockquote><p><strong>指出每一行的第一个非零元素在三元组中的位置</strong></p><p>这个不是矩阵转置用的那个吗 加快运行D</p><p>（当时选了B）（甚至我记得以前还选过A）</p><blockquote><p>Given the result of the 2nd run of a sorting method as { 11, 12, 13, 7, 8, 9, 23, 4, 5 }. Then among the following methods, this method has to be:</p><p>(1分)</p><p>A.bubble sort</p><p>B.selection sort</p><p>C.insertion sort</p><p>D.merge sort</p></blockquote><p>（错选D）merge是归并吧？</p><blockquote><p>To sort 10 elements by simple selection sort, the worst-case number of swaps is:</p><p>(1分)</p><p>A.9</p><p>B.36</p><p>C.45</p><p>D.100</p></blockquote><p>（错选C）</p><blockquote><p>将序列{ 2, 12, 16, 88, 5, 10, 34 }排序。若前2趟排序的结果如下：</p><ul><li>第1趟排序后：2, 12, 16, 10, 5, 34, 88</li><li>第2趟排序后：2, 5, 10, 12, 16, 34, 88</li></ul><p>则可能的排序算法是：</p><p>(1分)</p><p>A.冒泡排序</p><p>B.快速排序</p><p>C.归并排序</p><p>D.插入排序</p></blockquote><p>（错选A）完了这不是冒泡？</p><blockquote><p>数据序列{ 3, 1, 4, 11, 9, 16, 7, 28 }只能是下列哪种排序算法的两趟排序结果？</p><p>(1分)</p><p>A.冒泡排序</p><p>B.快速排序</p><p>C.插入排序</p><p>D.堆排序</p></blockquote><p>（错选D）完了</p><blockquote><p>无向连通图边数一定大于顶点个数减1。</p><p>(1分)</p><p>T</p><p>F</p></blockquote><p>（错选T）寄</p><blockquote><p>如果从有向图 <em>G</em> 的每一点均能通过深度优先搜索遍历到所有其它顶点，那么该图一定不存在拓扑序列。</p><p>(2分)</p><p>T</p><p>F</p></blockquote><p>（错选F）啊啊啊啊</p><blockquote><p>在用邻接表表示有<em>N</em>个结点<em>E</em>条边的图时，深度优先遍历算法的时间复杂度为：</p><p>(2分)</p><p>A.<em>O</em>(<em>N</em>)</p><p>B.</p><p>O*(<em>N</em>+<em>E</em>)</p><p>C.</p><p><em>O</em>(<em>N</em>2)</p><p>D.<em>O</em>(<em>N</em>2×<em>E</em>)</p></blockquote><p>（错选C）</p><blockquote><p>试利用Floyed算法，求下图所示有向图的各对顶点之间的最短路径。下列选项哪个给出了正确的最短路径长度矩阵和最短路径矩阵？</p><img src="/2022/01/05/DSpta/51cc76b9-d3b6-4ec6-bdf7-cfb542755b8b.JPG" class="" title="51cc76b9-d3b6-4ec6-bdf7-cfb542755b8b"><img src="/2022/01/05/DSpta/image-20220105190051921.png" class="" title="image-20220105190051921"></blockquote><p>（错选D）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt; 淦，错好多&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;稀疏矩阵采用三元组存储的时候，一般需要一个行逻辑链接的顺序表，用以指出每一行的第一个非零元素在三元组中的位置。用这个顺序表的主要目的是为了___。&lt;/p&gt;
-&lt;p&gt;(2分)&lt;/p&gt;
-&lt;p&gt;A.节省存储空间&lt;/p&gt;
-&lt;p&gt;B</summary>
-      
-    
-    
-    
-    
-    <category term="c" scheme="https://github.com/sterne012/sterne012.github.io/tags/c/"/>
-    
-    <category term="review" scheme="https://github.com/sterne012/sterne012.github.io/tags/review/"/>
     
   </entry>
   
