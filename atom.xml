@@ -6,7 +6,7 @@
   <link href="https://github.com/sterne012/sterne012.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/sterne012/sterne012.github.io/"/>
-  <updated>2023-03-26T02:57:31.256Z</updated>
+  <updated>2023-03-28T02:31:40.446Z</updated>
   <id>https://github.com/sterne012/sterne012.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xposed框架相关事宜</title>
+    <link href="https://github.com/sterne012/sterne012.github.io/2023/03/28/xposed/"/>
+    <id>https://github.com/sterne012/sterne012.github.io/2023/03/28/xposed/</id>
+    <published>2023-03-28T01:45:10.000Z</published>
+    <updated>2023-03-28T02:31:40.446Z</updated>
+    
+    <content type="html"><![CDATA[<p>我主要就用来qq换一个透明头像，确实很闲，下面是方法</p><h1 id="Xposed安装"><a href="#Xposed安装" class="headerlink" title="Xposed安装"></a>Xposed安装</h1><p>一个雷电模拟器（我用的雷电，不一定）</p><p>然后到应用商店下载xposed框架、qq</p><img src="/2023/03/28/xposed/image-20230328095259674.png" class="" title="image-20230328095259674"><p>打开框架发现连不上下载核心，报错，在b站找的教程，通过外部下载核心再导入，文件放网盘了（这个文件里也有xposed的本体安装包，应该也可以直装）（使用应用商店搜是因为保证安卓版本兼容，曾经因为这个问题玩不了一些游戏比如pjsk（但是pjsk就是不支持低版本安卓吧））</p><img src="/2023/03/28/xposed/image-20230328101713347.png" class="" title="image-20230328101713347"><p>找到一个对应安卓版本的（应该是7.1)，把这个放到模拟器共享文件夹</p><img src="/2023/03/28/xposed/image-20230328101917287.png" class="" title="image-20230328101917287"><p>选中移动到根目录的</p><p><code>Android\data\de.robv.android.xposed.installer\cache\downloads\framework</code>下，没有的文件夹全部新建</p><p>然后打开xposed，右上角勾选</p><img src="/2023/03/28/xposed/image-20230328102306016.png" class="" title="image-20230328102306016"><p>总之结果是能看到一个这个，点一下选install，然后按要求重启</p><img src="/2023/03/28/xposed/image-20230328102349065.png" class="" title="image-20230328102349065"><h1 id="QAuxiliarty"><a href="#QAuxiliarty" class="headerlink" title="QAuxiliarty"></a>QAuxiliarty</h1><ol><li><p>装上QAuxiliarty</p></li><li><p>在xposed中左上角-模块，勾选上（有可能要重启就重启），然后单击进入模块</p><img src="/2023/03/28/xposed/image-20230328102707103.png" class="" title="image-20230328102707103"></li><li><p>模块设置点qq进入，可以破解qq的一些功能。</p></li><li><p>右上角搜索“透明”</p><img src="/2023/03/28/xposed/image-20230328102827668.png" class="" title="image-20230328102827668"></li><li><p>允许上传透明头像和表情，点击开启，然后关掉它</p></li><li><p>搞定了，登上qq上传罢</p></li><li><p>我要做knd小姐的狗❤</p><img src="/2023/03/28/xposed/image-20230328102946770.png" class="" title="image-20230328102946770"></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我主要就用来qq换一个透明头像，确实很闲，下面是方法&lt;/p&gt;
+&lt;h1 id=&quot;Xposed安装&quot;&gt;&lt;a href=&quot;#Xposed安装&quot; class=&quot;headerlink&quot; title=&quot;Xposed安装&quot;&gt;&lt;/a&gt;Xposed安装&lt;/h1&gt;&lt;p&gt;一个雷电模拟器（我用的雷</summary>
+      
+    
+    
+    
+    
+    <category term="games" scheme="https://github.com/sterne012/sterne012.github.io/tags/games/"/>
+    
+  </entry>
   
   <entry>
     <title>致再见的pjsk——</title>
@@ -476,31 +499,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;SGD&quot;&gt;&lt;a href=&quot;#SGD&quot; class=&quot;headerlink&quot; title=&quot;SGD&quot;&gt;&lt;/a&gt;SGD&lt;/h2&gt;&lt;p&gt;SGD全称Stochastic Gradient Descent，随机梯度下降，1847年提出。每次选择一个mini-batch，而</summary>
-      
-    
-    
-    
-    
-    <category term="python" scheme="https://github.com/sterne012/sterne012.github.io/tags/python/"/>
-    
-    <category term="deeplearning" scheme="https://github.com/sterne012/sterne012.github.io/tags/deeplearning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习-手写数字识别</title>
-    <link href="https://github.com/sterne012/sterne012.github.io/2022/03/23/deep-digit-reco/"/>
-    <id>https://github.com/sterne012/sterne012.github.io/2022/03/23/deep-digit-reco/</id>
-    <published>2022-03-23T06:46:28.000Z</published>
-    <updated>2022-03-23T06:47:34.757Z</updated>
-    
-    <content type="html"><![CDATA[<p>简单贴一下代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf<br><span class="hljs-keyword">from</span> tensorflow.keras <span class="hljs-keyword">import</span> layers, optimizers, datasets, Sequential<br><span class="hljs-keyword">from</span> tensorflow.keras.layers <span class="hljs-keyword">import</span> Dense, Dropout, Activation<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-keyword">import</span> os<br><br><span class="hljs-keyword">from</span> tensorflow.python.keras.optimizer_v2.gradient_descent <span class="hljs-keyword">import</span> SGD<br><span class="hljs-keyword">from</span> tensorflow.python.keras.utils <span class="hljs-keyword">import</span> np_utils<br><br>os.environ[<span class="hljs-string">&#x27;TF_CPP_MIN_LOG_LEVEL&#x27;</span>] = <span class="hljs-string">&#x27;2&#x27;</span><br>os.environ[<span class="hljs-string">&quot;KMP_DUPLICATE_LIB_OK&quot;</span>] = <span class="hljs-string">&quot;TRUE&quot;</span><br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_data</span>(<span class="hljs-params">path</span>):</span><br>    f = np.load(path)<br>    x_train, y_train = f[<span class="hljs-string">&#x27;x_train&#x27;</span>], f[<span class="hljs-string">&#x27;y_train&#x27;</span>]<br>    x_test, y_test = f[<span class="hljs-string">&#x27;x_test&#x27;</span>], f[<span class="hljs-string">&#x27;y_test&#x27;</span>]<br>    f.close()<br>    x_train = x_train.reshape(x_train.shape[<span class="hljs-number">0</span>], <span class="hljs-number">28</span> * <span class="hljs-number">28</span>)<br>    x_test = x_test.reshape(x_test.shape[<span class="hljs-number">0</span>], <span class="hljs-number">28</span> * <span class="hljs-number">28</span>)<br>    x_train = x_train.astype(<span class="hljs-string">&#x27;float32&#x27;</span>)<br>    x_test = x_test.astype(<span class="hljs-string">&#x27;float32&#x27;</span>)<br>    y_train = np_utils.to_categorical(y_train, <span class="hljs-number">10</span>)<br>    y_test = np_utils.to_categorical(y_test, <span class="hljs-number">10</span>)<br>    x_train = x_train / <span class="hljs-number">255</span><br>    x_test = x_test / <span class="hljs-number">255</span><br>    <span class="hljs-keyword">return</span> (x_train, y_train), (x_test, y_test)<br><br><br>(x_train, y_train), (x_test, y_test) = load_data(path=<span class="hljs-string">&#x27;mnist.npz&#x27;</span>)<br><br><span class="hljs-comment"># 输出少量测试集结果</span><br><span class="hljs-comment"># print(x_train.shape)</span><br><span class="hljs-comment"># print(x_train[0])</span><br><span class="hljs-comment"># print(y_train.shape)</span><br><span class="hljs-comment"># print(y_train[0])</span><br><span class="hljs-comment"># plt.Figure()</span><br><span class="hljs-comment"># for i in range(10):</span><br><span class="hljs-comment">#     im = x_train[i].reshape(28, 28)</span><br><span class="hljs-comment">#     plt.imshow(im, &#x27;gray&#x27;)</span><br><span class="hljs-comment">#     print(y_train[i])</span><br><span class="hljs-comment">#     plt.pause(0.5)</span><br><span class="hljs-comment"># plt.show()</span><br><br>model = Sequential()<br>model.add(Dense(input_dim=<span class="hljs-number">28</span> * <span class="hljs-number">28</span>, units=<span class="hljs-number">500</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>))<br>model.add(Dense(units=<span class="hljs-number">500</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>))<br>model.add(Dense(units=<span class="hljs-number">500</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>))<br>model.add(Dense(units=<span class="hljs-number">10</span>, activation=<span class="hljs-string">&#x27;softmax&#x27;</span>))<br><br>model.<span class="hljs-built_in">compile</span>(loss=<span class="hljs-string">&#x27;categorical_crossentropy&#x27;</span>, optimizer=SGD(lr=<span class="hljs-number">0.1</span>), metrics=[<span class="hljs-string">&#x27;accuracy&#x27;</span>])<br><br>model.fit(x_train, y_train, batch_size=<span class="hljs-number">100</span>, epochs=<span class="hljs-number">20</span>)<br><br>result = model.evaluate(x_test, y_test)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\nTest loss:&#x27;</span>, result[<span class="hljs-number">0</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\nTest Accuracy:&#x27;</span>, result[<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;简单贴一下代码&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span</summary>
       
     
     
