@@ -139,7 +139,6 @@
 <p>\2) 要求在本地磁盘D创建一个学生-课程数据库（名称为student），只有一个数据文件和日志文件，文件名称分别为stu和stu_log，物理名称为stu_data.mdf 和stu_log.ldf，初始大小分别为5MB和3MB，增长方式分别为10%和1MB，数据文件最大为500MB，日志文件大小不受限制。</p>
 <p>\3) 创建一个SPJ数据库，该数据库的主数据文件逻辑名称为SPJ_data，物理文件为SPJ.mdf，初始大小为10MB，最大尺寸为无限大，增长速度为10%；数据库的日志文件逻辑名称为SPJ_log，物理文件名为SPJ.ldf，初始大小为1MB，最大尺寸为50MB，增长速度为1MB。</p>
 <p>2、在student数据库中使用sql语句建立课本第三章中的三个表student、course、sc,输入如下数据，掌握课堂上讲的内容。</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -150,8 +149,7 @@
 <th>Sdept</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>200515001</td>
 <td>赵菁菁</td>
 <td>女</td>
@@ -326,10 +324,7 @@
 <td>30</td>
 <td>WM</td>
 </tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -339,8 +334,7 @@
 <th>Ccredit</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>1</td>
 <td>数据库</td>
 <td>5</td>
@@ -400,10 +394,7 @@
 <td></td>
 <td>2</td>
 </tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -412,8 +403,7 @@
 <th>Grade</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>200515001</td>
 <td>1</td>
 <td>75</td>
@@ -543,14 +533,13 @@
 <td>8</td>
 <td>Null</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p>3、在SPJ数据库中使用SQL Server Management Studio（图形界面方式）建立课本第二章习题5中的四个表，并输入数据。（可以使用实验中提供的Excel文件，进行数据的导入）</p>
 <p>4、 修改student表结构，为该表增加phone和e_mail两个属性列</p>
 <p>5、 将student表的专业属性列数据类型改为变长字符串类型，长度为20</p>
 <p>8、 删除student表的phone属性列</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Student<br>(Sno <span class="hljs-type">CHAR</span>(<span class="hljs-number">9</span>) <span class="hljs-keyword">PRIMARY</span> KEY,<br>Sname <span class="hljs-type">CHAR</span>(<span class="hljs-number">20</span>),<br>Ssex <span class="hljs-type">CHAR</span>(<span class="hljs-number">2</span>) <span class="hljs-keyword">CHECK</span> (Ssex <span class="hljs-keyword">IN</span>(<span class="hljs-string">&#x27;女&#x27;</span>,<span class="hljs-string">&#x27;男&#x27;</span>)),<br>Sage <span class="hljs-type">SMALLINT</span>,<br>Sdept <span class="hljs-type">CHAR</span>(<span class="hljs-number">20</span>)<br>);<br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Course<br>(Cno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>) <span class="hljs-keyword">PRIMARY</span> KEY,<br>Cname <span class="hljs-type">CHAR</span>(<span class="hljs-number">40</span>),<br>Cpno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>),<br>Ccredit <span class="hljs-type">SMALLINT</span>,<br><span class="hljs-keyword">FOREIGN</span> KEY(Cpno)<span class="hljs-keyword">REFERENCES</span> Course(Cno)<br>);<br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> SC<br>(Sno <span class="hljs-type">CHAR</span>(<span class="hljs-number">9</span>),<br>Cno <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>),<br>Grade <span class="hljs-type">SMALLINT</span>,<br><span class="hljs-keyword">PRIMARY</span> KEY(Sno,Cno),<br><span class="hljs-keyword">FOREIGN</span> KEY(Sno)<span class="hljs-keyword">REFERENCES</span> Student(Sno),<br><span class="hljs-keyword">FOREIGN</span> KEY(Cno)<span class="hljs-keyword">REFERENCES</span> Course(Cno)<br>);<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student<br><span class="hljs-keyword">ADD</span> Phone <span class="hljs-type">INT</span>;<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student<br><span class="hljs-keyword">ADD</span> E_mail <span class="hljs-type">CHAR</span>(<span class="hljs-number">100</span>);<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student <br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">COLUMN</span> Sdept <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>);<br><br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Student<br><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">COLUMN</span> Phone;<br></code></pre></td></tr></table></figure>
+
 
       </section>
 
@@ -623,7 +612,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>60</span>
+        <span>63</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -669,7 +658,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">
-            帮助文档 (5)
+            帮助文档 (6)
           </a>
         </li>
       
@@ -686,7 +675,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/ACM/" style="font-size: 14.44px;" class="tags-cloud-4">ACM</a> <a href="/tags/Arc/" style="font-size: 11.11px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 13.33px;" class="tags-cloud-3">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 12.22px;" class="tags-cloud-2">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 15.56px;" class="tags-cloud-6">deeplearning</a> <a href="/tags/games/" style="font-size: 13.33px;" class="tags-cloud-3">games</a> <a href="/tags/hexo/" style="font-size: 11.11px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 11.11px;" class="tags-cloud-1">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/pyqt/" style="font-size: 10px;" class="tags-cloud-0">pyqt</a> <a href="/tags/python/" style="font-size: 17.78px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16.67px;" class="tags-cloud-7">review</a> <a href="/tags/sql/" style="font-size: 18.89px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
+      <a href="/tags/ACM/" style="font-size: 15px;" class="tags-cloud-5">ACM</a> <a href="/tags/Arc/" style="font-size: 11.25px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 13.75px;" class="tags-cloud-4">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 12.5px;" class="tags-cloud-3">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 15px;" class="tags-cloud-5">deeplearning</a> <a href="/tags/games/" style="font-size: 12.5px;" class="tags-cloud-3">games</a> <a href="/tags/hexo/" style="font-size: 11.25px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 11.25px;" class="tags-cloud-1">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/pyqt/" style="font-size: 10px;" class="tags-cloud-0">pyqt</a> <a href="/tags/python/" style="font-size: 17.5px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16.25px;" class="tags-cloud-6">review</a> <a href="/tags/sql/" style="font-size: 18.75px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
     </div>
   </div>
 </section>

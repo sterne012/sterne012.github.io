@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 5.4.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="sterne">
+  
+
+  
+
+  
+
+  <title>天梯赛的一些题-1 | Welcome -Sterne&#39;s Blog-</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="alternate" href="/atom.xml" title="Welcome -Sterne's Blog-" type="application/atom+xml">
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/img/cover.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Welcome -Sterne&#39;s Blog-
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">Home</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">Links</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">天梯赛的一些题-1</h1>
+          <h2 class="title-sub-wrap">
+            <strong>sterne</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2023-04-16T03:01:31.000Z" itemprop="datePublished">2023-04-16</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/cpp/">🏷️ cpp</a></li>
+  
+    <li><a href="/tags/ACM/">🏷️ ACM</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="L1-3-判断素数"><a href="#L1-3-判断素数" class="headerlink" title="L1-3 判断素数"></a>L1-3 判断素数</h1><p>本题的目标很简单，就是判断一个给定的正整数是否素数。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出一个正整数<code>N</code>（≤ 10），随后<code>N</code>行，每行给出一个小于231的需要判断的正整数。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>对每个需要判断的正整数，如果它是素数，则在一行中输出<code>Yes</code>，否则输出<code>No</code>。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs in">2<br>11<br>111<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs out">Yes<br>No<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ll;<br><span class="hljs-keyword">const</span> ll maxn = <span class="hljs-number">1e5</span>+<span class="hljs-number">7</span>;<br><span class="hljs-keyword">bool</span> bushisu[maxn];<br><span class="hljs-comment">///不是素数true：不是素数；false：是素数</span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">memset</span>(bushisu,<span class="hljs-literal">false</span>,<span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(bushisu));<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;maxn<span class="hljs-number">-1</span>;i++)&#123;<br>        <span class="hljs-keyword">if</span>(!bushisu[i]) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">2</span>; j * i &lt; maxn; j++) &#123;<br>                bushisu[j*i] = <span class="hljs-literal">true</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">init</span>();<br>    <span class="hljs-keyword">int</span> n;cin&gt;&gt;n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-keyword">int</span> x;cin&gt;&gt;x;<br>        <span class="hljs-keyword">if</span>(bushisu[x]) cout&lt;&lt;<span class="hljs-string">&quot;No&quot;</span>&lt;&lt;endl;<br>        <span class="hljs-keyword">else</span> cout&lt;&lt;<span class="hljs-string">&quot;Yes&quot;</span>&lt;&lt;endl;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>所以快去写个素数筛！</p>
+<h3 id="埃氏筛"><a href="#埃氏筛" class="headerlink" title="埃氏筛"></a>埃氏筛</h3><p>就是上边那个</p>
+<p>复杂度O(nloglogn)？</p>
+<h3 id="欧拉筛"><a href="#欧拉筛" class="headerlink" title="欧拉筛"></a>欧拉筛</h3><p>O(n)</p>
+<p>维护一个素数表prime，每个合数只被自己的最大非自身因数筛。</p>
+<img src="/2023/04/16/GPLT/image-20230416112838783.png" class="" title="image-20230416112838783">
+
+<p>到4，划掉的数也要用来运算，只是不加入质数表。</p>
+<p>2*4筛8，但不筛12（应该被2*6筛掉，否则这里会重复运算），用4mod2=0退出</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">///不是素数 true：不是素数；false：是素数</span><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn=<span class="hljs-number">1e5</span>+<span class="hljs-number">7</span>;<br><span class="hljs-keyword">bool</span> bushisu[maxn];<br><span class="hljs-keyword">int</span> prime[maxn];<br><span class="hljs-keyword">int</span> cnt=<span class="hljs-number">0</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;maxn;i++)&#123;<br>		<span class="hljs-keyword">if</span>(!bushisu[i])&#123;<br>			prime[cnt++]=i;<br>			<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;cnt&amp;&amp;prime[j]*i&lt;=maxn;j++)&#123;<br>				bushisu[prime[j]*i]=<span class="hljs-literal">true</span>;<br>				<span class="hljs-keyword">if</span>(i%prime[j]==<span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>第9行：</p>
+<p>j&lt;=cnt：prime数组最大长度，下标从1到cnt</p>
+<p>i*prime[j]：要筛掉的数，当然不能大于maxn</p>
+<h1 id="L1-4-到底是不是太胖了"><a href="#L1-4-到底是不是太胖了" class="headerlink" title="L1-4 到底是不是太胖了"></a>L1-4 到底是不是太胖了</h1><p>据说一个人的标准体重应该是其身高（单位：厘米）减去100、再乘以0.9所得到的公斤数。真实体重与标准体重误差在10%以内都是完美身材（即 | 真实体重 − 标准体重 | &lt; 标准体重×10%）。已知市斤是公斤的两倍。现给定一群人的身高和实际体重，请你告诉他们是否太胖或太瘦了。</p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数<code>N</code>（≤ 20）。随后<code>N</code>行，每行给出两个整数，分别是一个人的身高<code>H</code>（120 &lt; H &lt; 200；单位：厘米）和真实体重<code>W</code>（50 &lt; W ≤ 300；单位：市斤），其间以空格分隔。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>为每个人输出一行结论：如果是完美身材，输出<code>You are wan mei!</code>；如果太胖了，输出<code>You are tai pang le!</code>；否则输出<code>You are tai shou le!</code>。</p>
+<h3 id="输入样例：-1"><a href="#输入样例：-1" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs in">3<br>169 136<br>150 81<br>178 155<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-1"><a href="#输出样例：-1" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs out">You are wan mei!<br>You are tai shou le!<br>You are tai pang le!<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> n;cin&gt;&gt;n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-keyword">float</span> h,w;cin&gt;&gt;h&gt;&gt;w;<br>        w/=<span class="hljs-number">2.0</span>;<br>        <span class="hljs-keyword">float</span> temp = (h<span class="hljs-number">-100</span>)*<span class="hljs-number">0.9</span>;<br>        <span class="hljs-keyword">float</span> res = w-temp;<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">abs</span>(res)&lt;temp*<span class="hljs-number">0.1</span>)&#123;<br>            cout&lt;&lt;<span class="hljs-string">&quot;You are wan mei!&quot;</span>&lt;&lt;endl;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(res&gt;<span class="hljs-number">0</span>)&#123;<br>            cout&lt;&lt;<span class="hljs-string">&quot;You are tai pang le!&quot;</span>&lt;&lt;endl;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(res&lt;<span class="hljs-number">0</span>)&#123;<br>            cout&lt;&lt;<span class="hljs-string">&quot;You are tai shou le!&quot;</span>&lt;&lt;endl;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L1-5-跟奥巴马一起画方块"><a href="#L1-5-跟奥巴马一起画方块" class="headerlink" title="L1-5 跟奥巴马一起画方块"></a>L1-5 跟奥巴马一起画方块</h1><p>美国总统奥巴马不仅呼吁所有人都学习编程，甚至以身作则编写代码，成为美国历史上首位编写计算机代码的总统。2014年底，为庆祝“计算机科学教育周”正式启动，奥巴马编写了很简单的计算机代码：在屏幕上画一个正方形。现在你也跟他一起画吧！</p>
+<h3 id="输入格式：-2"><a href="#输入格式：-2" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出正方形边长<em>N</em>（3≤<em>N</em>≤21）和组成正方形边的某种字符<code>C</code>，间隔一个空格。</p>
+<h3 id="输出格式：-2"><a href="#输出格式：-2" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出由给定字符<code>C</code>画出的正方形。但是注意到行间距比列间距大，所以为了让结果看上去更像正方形，我们输出的行数实际上是列数的50%（四舍五入取整）。</p>
+<h3 id="输入样例：-2"><a href="#输入样例：-2" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs in">10 a<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-2"><a href="#输出样例：-2" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs out">aaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaaaaa<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> n;cin&gt;&gt;n;<br>    <span class="hljs-keyword">char</span> c;cin&gt;&gt;c;<br>    <span class="hljs-keyword">float</span> lie = n/<span class="hljs-number">2.0</span>;<br>    <span class="hljs-keyword">int</span> rlie;<br>    <span class="hljs-keyword">if</span>(lie-(<span class="hljs-keyword">int</span>)lie&gt;=<span class="hljs-number">0.5</span>) rlie = (<span class="hljs-keyword">int</span>)lie+<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span> rlie = (<span class="hljs-keyword">int</span>) lie;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;rlie;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;n;j++)&#123;<br>            cout&lt;&lt;c;<br>        &#125;<br>        cout&lt;&lt;endl;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L1-6-一帮一"><a href="#L1-6-一帮一" class="headerlink" title="L1-6 一帮一"></a>L1-6 一帮一</h1><p>“一帮一学习小组”是中小学中常见的学习组织方式，老师把学习成绩靠前的学生跟学习成绩靠后的学生排在一组。本题就请你编写程序帮助老师自动完成这个分配工作，即在得到全班学生的排名后，在当前尚未分组的学生中，将名次最靠前的学生与名次最靠后的<strong>异性</strong>学生分为一组。</p>
+<h3 id="输入格式：-3"><a href="#输入格式：-3" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出正偶数<code>N</code>（≤50），即全班学生的人数。此后<code>N</code>行，按照名次从高到低的顺序给出每个学生的性别（0代表女生，1代表男生）和姓名（不超过8个英文字母的非空字符串），其间以1个空格分隔。这里保证本班男女比例是1:1，并且没有并列名次。</p>
+<h3 id="输出格式：-3"><a href="#输出格式：-3" class="headerlink" title="输出格式："></a>输出格式：</h3><p>每行输出一组两个学生的姓名，其间以1个空格分隔。名次高的学生在前，名次低的学生在后。小组的输出顺序按照前面学生的名次从高到低排列。</p>
+<h3 id="输入样例：-3"><a href="#输入样例：-3" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs in">8<br>0 Amy<br>1 Tom<br>1 Bill<br>0 Cindy<br>0 Maya<br>1 John<br>1 Jack<br>0 Linda<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-3"><a href="#输出样例：-3" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs out">Amy Jack<br>Tom Linda<br>Bill Maya<br>Cindy John<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">stu</span>&#123;</span><br>    <span class="hljs-keyword">int</span> sex;<br>    string name;<br>    <span class="hljs-keyword">int</span> vis;<br>&#125;;<br>stu s[<span class="hljs-number">55</span>];<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> n;cin&gt;&gt;n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        cin&gt;&gt;s[i].sex&gt;&gt;s[i].name;<br>        s[i].vis=<span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        stu temp = s[i];<br>        <span class="hljs-keyword">if</span>(temp.vis) <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=n<span class="hljs-number">-1</span>;j&gt;=<span class="hljs-number">0</span>;j--)&#123;<br>            stu ttemp = s[j];<br>            <span class="hljs-keyword">if</span>(ttemp.vis) <span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">if</span>(temp.sex!=ttemp.sex)&#123;<br>                cout&lt;&lt;temp.name&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;ttemp.name&lt;&lt;endl;<br>                s[i].vis=<span class="hljs-number">1</span>;<br>                s[j].vis=<span class="hljs-number">1</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L1-7-出租"><a href="#L1-7-出租" class="headerlink" title="L1-7 出租"></a>L1-7 出租</h1><p>下面是新浪微博上曾经很火的一张图：</p>
+<img src="/2023/04/16/GPLT/187" class="" title="img">
+
+<p>一时间网上一片求救声，急问这个怎么破。其实这段代码很简单，<code>index</code>数组就是<code>arr</code>数组的下标，<code>index[0]=2</code> 对应 <code>arr[2]=1</code>，<code>index[1]=0</code> 对应 <code>arr[0]=8</code>，<code>index[2]=3</code> 对应 <code>arr[3]=0</code>，以此类推…… 很容易得到电话号码是<code>18013820100</code>。</p>
+<p>本题要求你编写一个程序，为任何一个电话号码生成这段代码 —— 事实上，只要生成最前面两行就可以了，后面内容是不变的。</p>
+<h3 id="输入格式：-4"><a href="#输入格式：-4" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个由11位数字组成的手机号码。</p>
+<h3 id="输出格式：-4"><a href="#输出格式：-4" class="headerlink" title="输出格式："></a>输出格式：</h3><p>为输入的号码生成代码的前两行，其中<code>arr</code>中的数字必须按递减顺序给出。</p>
+<h3 id="输入样例：-4"><a href="#输入样例：-4" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs in">18013820100<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-4"><a href="#输出样例：-4" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs out">int[] arr = new int[]&#123;8,3,2,1,0&#125;;<br>int[] index = new int[]&#123;3,0,4,3,1,0,2,4,3,4,4&#125;;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">bool</span> c[<span class="hljs-number">10</span>];<br>vector&lt;<span class="hljs-keyword">int</span>&gt; v;<br>vector&lt;<span class="hljs-keyword">int</span>&gt; ind;<br>map&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; t;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">memset</span>(c,<span class="hljs-literal">false</span>,<span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(c));<br>    string s;cin&gt;&gt;s;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;s.<span class="hljs-built_in">size</span>();i++)&#123;<br>        c[s[i]-<span class="hljs-string">&#x27;0&#x27;</span>]=<span class="hljs-literal">true</span>;<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">9</span>;i&gt;=<span class="hljs-number">0</span>;i--)&#123;<br>        <span class="hljs-keyword">if</span>(c[i])&#123;<br>            <span class="hljs-comment">///v 存所有用到的数字</span><br>            v.<span class="hljs-built_in">push_back</span>(i);<br>            t[i]=v.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;s.<span class="hljs-built_in">size</span>();i++)&#123;<br>        <span class="hljs-keyword">int</span> temp = s[i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>        ind.<span class="hljs-built_in">push_back</span>(t[temp]);<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;int[] arr = new int[]&#123;&quot;</span>);<br>    cout&lt;&lt;v[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;v.<span class="hljs-built_in">size</span>();i++)&#123;<br>        cout&lt;&lt;<span class="hljs-string">&#x27;,&#x27;</span>&lt;&lt;v[i];<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#125;;\n&quot;</span>);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;int[] index = new int[]&#123;&quot;</span>);<br>    cout &lt;&lt; ind[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i &lt; ind.<span class="hljs-built_in">size</span>(); i++)&#123;<br>        cout &lt;&lt; <span class="hljs-string">&#x27;,&#x27;</span> &lt;&lt; ind[i];<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#125;;&quot;</span>);<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L1-8-乘法口诀数列"><a href="#L1-8-乘法口诀数列" class="headerlink" title="L1-8 乘法口诀数列"></a>L1-8 乘法口诀数列</h1><p>本题要求你从任意给定的两个 1 位数字 <em>a</em>1 和 <em>a</em>2 开始，用乘法口诀生成一个数列 {<em>a**n</em>}，规则为从 <em>a</em>1 开始顺次进行，每次将当前数字与后面一个数字相乘，将结果贴在数列末尾。如果结果不是 1 位数，则其每一位都应成为数列的一项。</p>
+<h3 id="输入格式：-5"><a href="#输入格式：-5" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出 3 个整数，依次为 <em>a</em>1、<em>a</em>2 和 <em>n</em>，满足 0≤<em>a</em>1,<em>a</em>2≤9，0&lt;<em>n</em>≤103。</p>
+<h3 id="输出格式：-5"><a href="#输出格式：-5" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出数列的前 <em>n</em> 项。数字间以 1 个空格分隔，行首尾不得有多余空格。</p>
+<h3 id="输入样例：-5"><a href="#输入样例：-5" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs in">2 3 10<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-5"><a href="#输出样例：-5" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">2 3 6 1 8 6 8 4 8 4<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例解释："><a href="#样例解释：" class="headerlink" title="样例解释："></a>样例解释：</h3><p>数列前 2 项为 2 和 3。从 2 开始，因为 2×3=6，所以第 3 项是 6。因为 3×6=18，所以第 4、5 项分别是 1、8。依次类推…… 最后因为第 6 项有 6×8=48，对应第 10、11 项应该是 4、8。而因为只要求输出前 10 项，所以在输出 4 后结束。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn=<span class="hljs-number">1e4</span>+<span class="hljs-number">7</span>;<br><br>vector&lt;<span class="hljs-keyword">int</span>&gt; a;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> x,y,n;<br>    cin&gt;&gt;x&gt;&gt;y&gt;&gt;n;<br>    a.<span class="hljs-built_in">push_back</span>(x);<br>    a.<span class="hljs-built_in">push_back</span>(y);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-keyword">int</span> temp = a[i]*a[i+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">if</span>(temp&gt;<span class="hljs-number">9</span>)&#123;<br>            string s= <span class="hljs-built_in">to_string</span>(temp);<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;s.<span class="hljs-built_in">size</span>();j++)&#123;<br>                a.<span class="hljs-built_in">push_back</span>(s[j]-<span class="hljs-string">&#x27;0&#x27;</span>);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            a.<span class="hljs-built_in">push_back</span>(temp);<br>        &#125;<br>        <span class="hljs-keyword">if</span>(a.<span class="hljs-built_in">size</span>()==n)&#123;<br>            <span class="hljs-keyword">break</span>;<br>        &#125;<br>    &#125;<br>    cout&lt;&lt;a[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)&#123;<br>        cout&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;a[i];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L2-1-简单计算器"><a href="#L2-1-简单计算器" class="headerlink" title="L2-1 简单计算器"></a>L2-1 简单计算器</h1><img src="/2023/04/16/GPLT/7a19b25d-2a56-49dc-bbc4-698c8b1db505.jpg" class="" title="cal.jpg">
+
+<p>本题要求你为初学数据结构的小伙伴设计一款简单的利用堆栈执行的计算器。如上图所示，计算器由两个堆栈组成，一个堆栈 <em>S</em>1 存放数字，另一个堆栈 <em>S</em>2 存放运算符。计算器的最下方有一个等号键，每次按下这个键，计算器就执行以下操作：</p>
+<ol>
+<li>从 <em>S</em>1 中弹出两个数字，顺序为 <em>n</em>1 和 <em>n</em>2；</li>
+<li>从 <em>S</em>2 中弹出一个运算符 op；</li>
+<li>执行计算 <em>n</em>2 op <em>n</em>1；</li>
+<li>将得到的结果压回 <em>S</em>1。</li>
+</ol>
+<p>直到两个堆栈都为空时，计算结束，最后的结果将显示在屏幕上。</p>
+<h3 id="输入格式：-6"><a href="#输入格式：-6" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入首先在第一行给出正整数 <em>N</em>（1&lt;<em>N</em>≤103），为 <em>S</em>1 中数字的个数。</p>
+<p>第二行给出 <em>N</em> 个绝对值不超过 100 的整数；第三行给出 <em>N</em>−1 个运算符 —— 这里仅考虑 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 这四种运算。一行中的数字和符号都以空格分隔。</p>
+<h3 id="输出格式：-6"><a href="#输出格式：-6" class="headerlink" title="输出格式："></a>输出格式：</h3><p>将输入的数字和运算符按给定顺序分别压入堆栈 <em>S</em>1 和 <em>S</em>2，将执行计算的最后结果输出。注意所有的计算都只取结果的整数部分。题目保证计算的中间和最后结果的绝对值都不超过 109。</p>
+<p>如果执行除法时出现分母为零的非法操作，则在一行中输出：<code>ERROR: X/0</code>，其中 <code>X</code> 是当时的分子。然后结束程序。</p>
+<h3 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例 1："></a>输入样例 1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs in">5<br>40 5 8 3 2<br>/ * - +<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例 1："></a>输出样例 1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">2<br></code></pre></td></tr></table></figure>
+
+<h3 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例 2："></a>输入样例 2：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs in">5<br>2 5 8 4 4<br>* / - +<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例 2："></a>输出样例 2：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">ERROR: 5/0<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br>stack&lt;<span class="hljs-keyword">int</span>&gt; num;<br>stack&lt;<span class="hljs-keyword">char</span>&gt;op;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> n;cin&gt;&gt;n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-keyword">int</span> x;cin&gt;&gt;x;<br>        num.<span class="hljs-built_in">push</span>(x);<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n<span class="hljs-number">-1</span>;i++)&#123;<br>        <span class="hljs-keyword">char</span> c;cin&gt;&gt;c;<br>        op.<span class="hljs-built_in">push</span>(c);<br>        <span class="hljs-built_in">getchar</span>();<br>    &#125;<br>    <span class="hljs-keyword">bool</span> fl=<span class="hljs-literal">true</span>;<br>    <span class="hljs-keyword">while</span>(!op.<span class="hljs-built_in">empty</span>())&#123;<br>        <span class="hljs-keyword">int</span> n1 = num.<span class="hljs-built_in">top</span>();<br>        num.<span class="hljs-built_in">pop</span>();<br>        <span class="hljs-keyword">int</span> n2 = num.<span class="hljs-built_in">top</span>();<br>        num.<span class="hljs-built_in">pop</span>();<br>        <span class="hljs-keyword">char</span> oper = op.<span class="hljs-built_in">top</span>();<br>        op.<span class="hljs-built_in">pop</span>();<br>        <span class="hljs-keyword">if</span>(oper == <span class="hljs-string">&#x27;+&#x27;</span>)&#123;<br>            num.<span class="hljs-built_in">push</span>(n2+n1);<br>        &#125;<br>        <span class="hljs-keyword">if</span>(oper == <span class="hljs-string">&#x27;-&#x27;</span>)&#123;<br>            num.<span class="hljs-built_in">push</span>(n2-n1);<br>        &#125;<br>        <span class="hljs-keyword">if</span>(oper == <span class="hljs-string">&#x27;*&#x27;</span>)&#123;<br>            num.<span class="hljs-built_in">push</span>(n2*n1);<br>        &#125;<br>        <span class="hljs-keyword">if</span>(oper == <span class="hljs-string">&#x27;/&#x27;</span>)&#123;<br>            <span class="hljs-keyword">if</span>(n1!=<span class="hljs-number">0</span>)&#123;<br>                num.<span class="hljs-built_in">push</span>(n2/n1);<br>            &#125;<br>            <span class="hljs-keyword">else</span>&#123;<br>                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;ERROR: %d/%d&quot;</span>,n2,n1);<br>                fl=<span class="hljs-literal">false</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(fl) cout&lt;&lt;num.<span class="hljs-built_in">top</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L2-2-口罩发放"><a href="#L2-2-口罩发放" class="headerlink" title="L2-2 口罩发放"></a><strong>L2-2 口罩发放</strong></h1><p>大模拟 ，麻了，感觉字符串没处理好然后t</p>
+<p>为了抗击来势汹汹的 COVID19 新型冠状病毒，全国各地均启动了各项措施控制疫情发展，其中一个重要的环节是口罩的发放。</p>
+<p>某市出于给市民发放口罩的需要，推出了一款小程序让市民填写信息，方便工作的开展。小程序收集了各种信息，包括市民的姓名、身份证、身体情况、提交时间等，但因为数据量太大，需要根据一定规则进行筛选和处理，请你编写程序，按照给定规则输出口罩的寄送名单。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行是两个正整数 <em>D</em> 和 <em>P</em>（1≤<em>D</em>,<em>P</em>≤30），表示有 <em>D</em> 天的数据，市民两次获得口罩的时间至少需要间隔 <em>P</em> 天。</p>
+<p>接下来 <em>D</em> 块数据，每块给出一天的申请信息。第 <em>i</em> 块数据（<em>i</em>=1,⋯,<em>D</em>）的第一行是两个整数 <em>T**i</em> 和 <em>S**i</em>（1≤<em>T**i</em>,<em>S**i</em>≤1000），表示在第 <em>i</em> 天有 <em>T**i</em> 条申请，总共有 <em>S**i</em> 个口罩发放名额。随后 <em>T**i</em> 行，每行给出一条申请信息，格式如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">姓名 身份证号 身体情况 提交时间<br></code></pre></td></tr></table></figure>
+
+<p>给定数据约束如下：</p>
+<ul>
+<li><code>姓名</code> 是一个长度不超过 10 的不包含空格的非空字符串；</li>
+<li><code>身份证号</code> 是一个长度不超过 20 的非空字符串；</li>
+<li><code>身体情况</code> 是 0 或者 1，0 表示自觉良好，1 表示有相关症状；</li>
+<li><code>提交时间</code> 是 hh:mm，为24小时时间（由 <code>00:00</code> 到 <code>23:59</code>。例如 09:08。）。注意，给定的记录的提交时间不一定有序；</li>
+<li><code>身份证号</code> 各不相同，同一个身份证号被认为是同一个人，数据保证同一个身份证号姓名是相同的。</li>
+</ul>
+<p>能发放口罩的记录要求如下：</p>
+<ul>
+<li><code>身份证号</code> 必须是 18 位的<strong>数字</strong>（可以包含前导0）；</li>
+<li>同一个身份证号若在第 <em>i</em> 天申请成功，则接下来的 <em>P</em> 天不能再次申请。也就是说，若第 <em>i</em> 天申请成功，则等到第 <em>i</em>+<em>P</em>+1 天才能再次申请；</li>
+<li>在上面两条都符合的情况下，按照提交时间的先后顺序发放，直至全部记录处理完毕或 <em>S**i</em> 个名额用完。如果提交时间相同，则按照在列表中出现的先后顺序决定。</li>
+</ul>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对于每一天的申请记录，每行输出一位得到口罩的人的姓名及身份证号，用一个空格隔开。顺序按照发放顺序确定。</p>
+<p>在输出完发放记录后，你还需要输出有合法记录的、身体状况为 1 的申请人的姓名及身份证号，用空格隔开。顺序按照申请记录中出现的顺序确定，同一个人只需要输出一次。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs in">4 2<br>5 3<br>A 123456789012345670 1 13:58<br>B 123456789012345671 0 13:58<br>C 12345678901234567 0 13:22<br>D 123456789012345672 0 03:24<br>C 123456789012345673 0 13:59<br>4 3<br>A 123456789012345670 1 13:58<br>E 123456789012345674 0 13:59<br>C 123456789012345673 0 13:59<br>F F 0 14:00<br>1 3<br>E 123456789012345674 1 13:58<br>1 1<br>A 123456789012345670 0 14:11<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs out">D 123456789012345672<br>A 123456789012345670<br>B 123456789012345671<br>E 123456789012345674<br>C 123456789012345673<br>A 123456789012345670<br>A 123456789012345670<br>E 123456789012345674<br></code></pre></td></tr></table></figure>
+
+<h3 id="样例解释：-1"><a href="#样例解释：-1" class="headerlink" title="样例解释："></a>样例解释：</h3><p>输出中，第一行到第三行是第一天的部分；第四、五行是第二天的部分；第三天没有符合要求的市民；第六行是第四天的部分。最后两行按照出现顺序输出了可能存在身体不适的人员。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">people</span>&#123;</span><br>    string name;<br>    string sfz;<br>    <span class="hljs-keyword">int</span> sta;<br>    <span class="hljs-keyword">int</span> hh;<br>    <span class="hljs-keyword">int</span> mm;<br>    <span class="hljs-keyword">int</span> suc_day;<span class="hljs-comment">//上次成功领取的时间</span><br>    <span class="hljs-keyword">int</span> ling;<span class="hljs-comment">//0表示不能领，1表示能领，记入排序</span><br>    <span class="hljs-built_in">people</span>()&#123;<br>        ling=<span class="hljs-number">1</span>;<br>        suc_day=<span class="hljs-number">-1</span>;<br>    &#125;<br>&#125;;<br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(people&amp; a,people&amp; b)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(a.ling==b.ling) &#123;<br>        <span class="hljs-keyword">if</span> (a.hh != b.hh) <span class="hljs-keyword">return</span> a.hh &lt; b.hh;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> a.mm &lt; b.mm;<br>    &#125;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> a.ling&gt;b.ling;<br>&#125;<br>vector&lt;people&gt; peo;<br><span class="hljs-keyword">int</span> num=<span class="hljs-number">0</span>;<span class="hljs-comment">//总人数</span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-comment">///d：d天的数据；p：市民两次获得口罩的间隔时间</span><br>    <span class="hljs-keyword">int</span> d, p;<br>    cin &gt;&gt; d &gt;&gt; p;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; d; i++) &#123;<br>        vector&lt;people&gt; today;<br><br>        <span class="hljs-comment">///总共0-d-1天，i表示每一天</span><br>        <span class="hljs-keyword">int</span> t, s;<br>        cin &gt;&gt; t &gt;&gt; s;<br>        <span class="hljs-comment">///t：有多少人来，s：多少个口罩</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; t; j++) &#123;<br>            people temp;<br>            cin &gt;&gt; temp.name &gt;&gt; temp.sfz &gt;&gt; temp.sta;<br>            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d:%d&quot;</span>, &amp;temp.hh, &amp;temp.mm);<br><br>            <span class="hljs-comment">//判断身份证号格式</span><br>            <span class="hljs-keyword">if</span>(temp.sfz.<span class="hljs-built_in">size</span>()!=<span class="hljs-number">18</span>)&#123;<br>                <span class="hljs-keyword">continue</span>;<br>            &#125;<br>            <span class="hljs-keyword">bool</span> f=<span class="hljs-literal">true</span>;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k=<span class="hljs-number">0</span>;k&lt;temp.sfz.<span class="hljs-built_in">size</span>();k++)&#123;<br>                <span class="hljs-keyword">if</span>(temp.sfz[k]-<span class="hljs-string">&#x27;0&#x27;</span>&lt;<span class="hljs-number">0</span>||temp.sfz[k]-<span class="hljs-string">&#x27;0&#x27;</span>&gt;<span class="hljs-number">9</span>)&#123;<br>                    f=<span class="hljs-literal">false</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(!f) <span class="hljs-keyword">continue</span>;<br><br><br>            <span class="hljs-comment">//判断以前是否领过</span><br>            <span class="hljs-keyword">bool</span> peoyou=<span class="hljs-literal">false</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; peo.<span class="hljs-built_in">size</span>(); k++) &#123;<br>                <span class="hljs-keyword">if</span> (peo[k].sfz == temp.sfz) &#123;<br>                    peoyou=<span class="hljs-literal">true</span>;<br>                    <span class="hljs-keyword">if</span> (peo[k].suc_day==<span class="hljs-number">-1</span>||peo[k].suc_day + p + <span class="hljs-number">1</span> &lt; i) &#123;<br>                        <span class="hljs-comment">//能领</span><br>                        peo[k].ling = <span class="hljs-number">1</span>;<br>                        temp.ling = <span class="hljs-number">1</span>;<br>                    &#125; <span class="hljs-keyword">else</span> &#123;<br>                        peo[k].ling = <span class="hljs-number">0</span>;<br>                        temp.ling = <span class="hljs-number">0</span>;<br>                    &#125;<br>                    <span class="hljs-keyword">if</span>(temp.sta==<span class="hljs-number">1</span>) peo[k].sta=<span class="hljs-number">1</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(!peoyou) peo.<span class="hljs-built_in">push_back</span>(temp);<br>            today.<span class="hljs-built_in">push_back</span>(temp);<br>        &#125;<br><br>        <span class="hljs-comment">//每天排序</span><br>        <span class="hljs-built_in">sort</span>(today.<span class="hljs-built_in">begin</span>(), today.<span class="hljs-built_in">end</span>(), cmp);<br><span class="hljs-comment">//        cout&lt;&lt;&quot;day&quot;&lt;&lt;i&lt;&lt;endl;</span><br><span class="hljs-comment">//        for(int j=0;j&lt;today.size();j++)&#123;</span><br><span class="hljs-comment">//            cout&lt;&lt;today[j].name&lt;&lt;&#x27; &#x27;;</span><br><span class="hljs-comment">//        &#125;</span><br><span class="hljs-comment">//        cout&lt;&lt;endl;</span><br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; s&amp;&amp; j&lt;today.<span class="hljs-built_in">size</span>(); j++) &#123;<br>            people temp = today[j];<br>            <span class="hljs-keyword">if</span> (temp.ling) &#123;<br>                cout &lt;&lt; temp.name &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span> &lt;&lt; temp.sfz&lt;&lt;endl;<br>                <span class="hljs-comment">//找到peo中的数据，更新sucday</span><br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; peo.<span class="hljs-built_in">size</span>(); k++) &#123;<br>                    <span class="hljs-keyword">if</span> (peo[k].sfz == temp.sfz) &#123;<br>                        peo[k].suc_day =i;<br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//输出有症状的</span><br><span class="hljs-comment">//    cout&lt;&lt;&quot;有症状&quot;&lt;&lt;endl;</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;peo.<span class="hljs-built_in">size</span>();i++)&#123;<br>        <span class="hljs-keyword">if</span>(peo[i].sta)&#123;<br>            cout&lt;&lt;peo[i].name&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;peo[i].sfz&lt;&lt;endl;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L2-3-互评成绩"><a href="#L2-3-互评成绩" class="headerlink" title="L2-3 互评成绩"></a><strong>L2-3 互评成绩</strong></h1><p>学生互评作业的简单规则是这样定的：每个人的作业会被<code>k</code>个同学评审，得到<code>k</code>个成绩。系统需要去掉一个最高分和一个最低分，将剩下的分数取平均，就得到这个学生的最后成绩。本题就要求你编写这个互评系统的算分模块。</p>
+<h3 id="输入格式：-7"><a href="#输入格式：-7" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出3个正整数<code>N</code>（3 &lt; <code>N</code> ≤104，学生总数）、<code>k</code>（3 ≤ <code>k</code> ≤ 10，每份作业的评审数）、<code>M</code>（≤ 20，需要输出的学生数）。随后<code>N</code>行，每行给出一份作业得到的<code>k</code>个评审成绩（在区间[0, 100]内），其间以空格分隔。</p>
+<h3 id="输出格式：-7"><a href="#输出格式：-7" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按非递减顺序输出最后得分最高的<code>M</code>个成绩，保留小数点后3位。分数间有1个空格，行首尾不得有多余空格。</p>
+<h3 id="输入样例：-6"><a href="#输入样例：-6" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs in">6 5 3<br>88 90 85 99 60<br>67 60 80 76 70<br>90 93 96 99 99<br>78 65 77 70 72<br>88 88 88 88 88<br>55 55 55 55 55<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-6"><a href="#输出样例：-6" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">87.667 88.000 96.000<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn=<span class="hljs-number">1e4</span>+<span class="hljs-number">7</span>;<br><br><span class="hljs-keyword">float</span> ping[<span class="hljs-number">15</span>];<br>vector&lt;<span class="hljs-keyword">float</span>&gt; cal;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> n,k,m;<br>    cin&gt;&gt;n&gt;&gt;k&gt;&gt;m;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;k;j++)&#123;<br>            cin&gt;&gt;ping[j];<br>        &#125;<br>        <span class="hljs-built_in">sort</span>(ping,ping+k);<br>        <span class="hljs-keyword">float</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;k<span class="hljs-number">-1</span>;j++)&#123;<br>            sum+=ping[j];<br>        &#125;<br>        cal.<span class="hljs-built_in">push_back</span>((<span class="hljs-keyword">float</span>)sum/(<span class="hljs-keyword">float</span>)(k<span class="hljs-number">-2</span>));<br>    &#125;<br>    <span class="hljs-built_in">sort</span>(cal.<span class="hljs-built_in">begin</span>(),cal.<span class="hljs-built_in">end</span>());<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=cal.<span class="hljs-built_in">size</span>()-m;i&lt;cal.<span class="hljs-built_in">size</span>();i++)&#123;<br>        <span class="hljs-keyword">if</span>(i==cal.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>)&#123;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.3f&quot;</span>,cal[i]);<br><br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.3f &quot;</span>,cal[i]);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="L2-4-愿天下有情人都是失散多年的兄妹"><a href="#L2-4-愿天下有情人都是失散多年的兄妹" class="headerlink" title="L2-4 愿天下有情人都是失散多年的兄妹"></a><strong>L2-4 愿天下有情人都是失散多年的兄妹</strong></h1><p>呵呵。大家都知道五服以内不得通婚，即两个人最近的共同祖先如果在五代以内（即本人、父母、祖父母、曾祖父母、高祖父母）则不可通婚。本题就请你帮助一对有情人判断一下，他们究竟是否可以成婚？</p>
+<h3 id="输入格式：-8"><a href="#输入格式：-8" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数<code>N</code>（2 ≤ <code>N</code> ≤104），随后<code>N</code>行，每行按以下格式给出一个人的信息：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">本人ID 性别 父亲ID 母亲ID<br></code></pre></td></tr></table></figure>
+
+<p>其中<code>ID</code>是5位数字，每人不同；性别<code>M</code>代表男性、<code>F</code>代表女性。如果某人的父亲或母亲已经不可考，则相应的<code>ID</code>位置上标记为<code>-1</code>。</p>
+<p>接下来给出一个正整数<code>K</code>，随后<code>K</code>行，每行给出一对有情人的<code>ID</code>，其间以空格分隔。</p>
+<p>注意：题目保证两个人是同辈，每人只有一个性别，并且血缘关系网中没有乱伦或隔辈成婚的情况。</p>
+<h3 id="输出格式：-8"><a href="#输出格式：-8" class="headerlink" title="输出格式："></a>输出格式：</h3><p>对每一对有情人，判断他们的关系是否可以通婚：如果两人是同性，输出<code>Never Mind</code>；如果是异性并且关系出了五服，输出<code>Yes</code>；如果异性关系未出五服，输出<code>No</code>。</p>
+<h3 id="输入样例：-7"><a href="#输入样例：-7" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs in">24<br>00001 M 01111 -1<br>00002 F 02222 03333<br>00003 M 02222 03333<br>00004 F 04444 03333<br>00005 M 04444 05555<br>00006 F 04444 05555<br>00007 F 06666 07777<br>00008 M 06666 07777<br>00009 M 00001 00002<br>00010 M 00003 00006<br>00011 F 00005 00007<br>00012 F 00008 08888<br>00013 F 00009 00011<br>00014 M 00010 09999<br>00015 M 00010 09999<br>00016 M 10000 00012<br>00017 F -1 00012<br>00018 F 11000 00013<br>00019 F 11100 00018<br>00020 F 00015 11110<br>00021 M 11100 00020<br>00022 M 00016 -1<br>00023 M 10012 00017<br>00024 M 00022 10013<br>9<br>00021 00024<br>00019 00024<br>00011 00012<br>00022 00018<br>00001 00004<br>00013 00016<br>00017 00015<br>00019 00021<br>00010 00011<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-7"><a href="#输出样例：-7" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs out">Never Mind<br>Yes<br>Never Mind<br>No<br>Yes<br>No<br>Yes<br>No<br>No<br></code></pre></td></tr></table></figure>
+
+<p>没做，但是一眼LCA，所以写了个LCA板子</p>
+<h1 id="L3-1-地铁一日游"><a href="#L3-1-地铁一日游" class="headerlink" title="L3-1 地铁一日游"></a><strong>L3-1 地铁一日游</strong></h1><p>森森喜欢坐地铁。这个假期，他终于来到了传说中的地铁之城——魔都，打算好好过一把坐地铁的瘾！</p>
+<p>魔都地铁的计价规则是：起步价 2 元，出发站与到达站的最短距离（即<strong>计费距离</strong>）每 K 公里增加 1 元车费。</p>
+<p>例如取 <strong>K</strong> = 10，动安寺站离魔都绿桥站为 40 公里，则车费为 2 + 4 = 6 元。</p>
+<p>为了获得最大的满足感，森森决定用以下的方式坐地铁：在某一站上车（不妨设为地铁站 <strong>A</strong>），则对于所有车费相同的到达站，森森只会在计费距离最远的站或线路末端站点出站，然后用森森美图 App 在站点外拍一张认证照，再按同样的方式前往下一个站点。</p>
+<p>坐着坐着，森森突然好奇起来：在给定出发站的情况下（在出发时森森也会拍一张照），他的整个旅程中能够留下哪些站点的认证照？</p>
+<p>地铁是铁路运输的一种形式，指在地下运行为主的城市轨道交通系统。一般来说，地铁由若干个站点组成，并有多条不同的线路双向行驶，可类比公交车，当两条或更多条线路经过同一个站点时，可进行<strong>换乘</strong>，更换自己所乘坐的线路。举例来说，魔都 1 号线和 2 号线都经过人民广场站，则乘坐 1 号线到达人民广场时就可以换乘到 2 号线前往 2 号线的各个站点。换乘不需出站（也拍不到认证照），因此森森乘坐地铁时换乘不受限制。</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行是三个正整数 <strong>N</strong>、<strong>M</strong> 和 <strong>K</strong>，表示魔都地铁有 <strong>N</strong> 个车站 (1 ≤ <strong>N</strong> ≤ 200)，<strong>M</strong> 条线路 (1 ≤ <strong>M</strong> ≤ 1500)，最短距离每超过 <strong>K</strong> 公里 (1 ≤ <strong>K</strong> ≤ 106)，加 1 元车费。</p>
+<p>接下来 <strong>M</strong> 行，每行由以下格式组成：</p>
+<p>&lt;站点1&gt;&lt;空格&gt;&lt;距离&gt;&lt;空格&gt;&lt;站点2&gt;&lt;空格&gt;&lt;距离&gt;&lt;空格&gt;&lt;站点3&gt; … &lt;站点X-1&gt;&lt;空格&gt;&lt;距离&gt;&lt;空格&gt;&lt;站点X&gt;</p>
+<p>其中站点是一个 1 到 <strong>N</strong> 的编号；两个站点编号之间的距离指两个站在该线路上的距离。两站之间距离是一个不大于 106 的正整数。一条线路上的站点互不相同。</p>
+<p><strong>注意</strong>：两个站之间可能有多条直接连接的线路，且距离不一定相等。</p>
+<p>再接下来有一个正整数 <strong>Q</strong> (1 ≤ <strong>Q</strong> ≤ 200)，表示森森尝试从 <strong>Q</strong> 个站点出发。</p>
+<p>最后有 <strong>Q</strong> 行，每行一个正整数 <strong>Xi</strong>，表示森森尝试从编号为 <strong>Xi</strong> 的站点出发。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对于森森每个尝试的站点，输出一行若干个整数，表示能够到达的站点编号。站点编号从小到大排序。</p>
+<h3 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs in">6 2 6<br>1 6 2 4 3 1 4<br>5 6 2 6 6<br>4<br>2<br>3<br>4<br>5<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs out">1 2 4 5 6<br>1 2 3 4 5 6<br>1 2 4 5 6<br>1 2 4 5 6<br></code></pre></td></tr></table></figure>
+
+<h1 id="L3-2-计算图"><a href="#L3-2-计算图" class="headerlink" title="L3-2 计算图"></a><strong>L3-2 计算图</strong></h1><p>“计算图”（computational graph）是现代深度学习系统的基础执行引擎，提供了一种表示任意数学表达式的方法，例如用有向无环图表示的神经网络。 图中的节点表示基本操作或输入变量，边表示节点之间的中间值的依赖性。 例如，下图就是一个函数<br><em>f</em>(<em>x</em>1​,<em>x</em>2​)=ln<em>x</em>1​+<em>x</em>1​<em>x</em>2​−sin<em>x</em>2​<br>的计算图。</p>
+<img src="/2023/04/16/GPLT/f1986194-8842-45d2-8ae8-5a4eb42752da.png" class="" title="figure.png">
+
+<p>现在给定一个计算图，请你根据所有输入变量计算函数值及其偏导数（即梯度）。 例如，给定输入<em>x</em>1=2,<em>x</em>2=5，上述计算图获得函数值 <em>f</em>(2,5)=ln(2)+2×5−sin(5)=11.652；并且根据微分链式法则，上图得到的梯度 ∇<em>f</em>=[∂<em>f</em>/∂<em>x</em>1,∂<em>f</em>/∂<em>x</em>2]=[1/<em>x</em>1+<em>x</em>2,<em>x</em>1−cos<em>x</em>2]=[5.500,1.716]。</p>
+<p>知道你已经把微积分忘了，所以这里只要求你处理几个简单的算子：加法、减法、乘法、指数（<em>e**x</em>，即编程语言中的 exp(x) 函数）、对数（ln<em>x</em>，即编程语言中的 log(x) 函数）和正弦函数（sin<em>x</em>，即编程语言中的 sin(x) 函数）。</p>
+<p>友情提醒：</p>
+<ul>
+<li>常数的导数是 0；<em>x</em> 的导数是 1；<em>e**x</em> 的导数还是 <em>e**x</em>；ln<em>x</em> 的导数是 1/<em>x</em>；sin<em>x</em> 的导数是 cos<em>x</em>。</li>
+<li>回顾一下什么是<strong>偏导数</strong>：在数学中，一个多变量的函数的偏导数，就是它关于其中一个变量的导数而保持其他变量恒定。在上面的例子中，当我们对 <em>x</em>1 求偏导数 ∂<em>f</em>/∂<em>x</em>1 时，就将 <em>x</em>2 当成常数，所以得到 ln<em>x</em>1 的导数是 1/<em>x</em>1，<em>x</em>1<em>x</em>2 的导数是 <em>x</em>2，sin<em>x</em>2 的导数是 0。</li>
+<li>回顾一下<strong>链式法则</strong>：复合函数的导数是构成复合这有限个函数在相应点的导数的乘积，即若有 <em>u</em>=<em>f</em>(<em>y</em>)，<em>y</em>=<em>g</em>(<em>x</em>)，则 <em>d**u</em>/<em>d**x</em>=<em>d**u</em>/<em>d**y</em>⋅<em>d**y</em>/<em>d**x</em>。例如对 sin(ln<em>x</em>) 求导，就得到 cos(ln<em>x</em>)⋅(1/<em>x</em>)。</li>
+</ul>
+<p>如果你注意观察，可以发现在计算图中，计算函数值是一个从左向右进行的计算，而计算偏导数则正好相反。</p>
+<h3 id="输入格式：-9"><a href="#输入格式：-9" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出正整数 <em>N</em>（≤5×104），为计算图中的顶点数。</p>
+<p>以下 <em>N</em> 行，第 <em>i</em> 行给出第 <em>i</em> 个顶点的信息，其中 <em>i</em>=0,1,⋯,<em>N</em>−1。第一个值是顶点的类型编号，分别为：</p>
+<ul>
+<li>0 代表输入变量</li>
+<li>1 代表加法，对应 <em>x</em>1+<em>x</em>2</li>
+<li>2 代表减法，对应 <em>x</em>1−<em>x</em>2</li>
+<li>3 代表乘法，对应 <em>x</em>1×<em>x</em>2</li>
+<li>4 代表指数，对应 <em>e**x</em></li>
+<li>5 代表对数，对应 ln<em>x</em></li>
+<li>6 代表正弦函数，对应 sin<em>x</em></li>
+</ul>
+<p>对于输入变量，后面会跟它的双精度浮点数值；对于单目算子，后面会跟它对应的单个变量的顶点编号（编号从 0 开始）；对于双目算子，后面会跟它对应两个变量的顶点编号。</p>
+<p>题目保证只有一个输出顶点（即没有出边的顶点，例如上图最右边的 <code>-</code>），且计算过程不会超过双精度浮点数的计算精度范围。</p>
+<h3 id="输出格式：-9"><a href="#输出格式：-9" class="headerlink" title="输出格式："></a>输出格式：</h3><p>首先在第一行输出给定计算图的函数值。在第二行顺序输出函数对于每个变量的偏导数的值，其间以一个空格分隔，行首尾不得有多余空格。偏导数的输出顺序与输入变量的出现顺序相同。输出小数点后 3 位。</p>
+<h3 id="输入样例：-8"><a href="#输入样例：-8" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs in">7<br>0 2.0<br>0 5.0<br>5 0<br>3 0 1<br>6 1<br>1 2 3<br>2 5 4<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-8"><a href="#输出样例：-8" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs out">11.652<br>5.500 1.716<br></code></pre></td></tr></table></figure>
+
+<h1 id="L3-3-球队“食物链”"><a href="#L3-3-球队“食物链”" class="headerlink" title="L3-3 球队“食物链”"></a><strong>L3-3 球队“食物链”</strong></h1><p>某国的足球联赛中有<em>N</em>支参赛球队，编号从1至<em>N</em>。联赛采用主客场双循环赛制，参赛球队两两之间在双方主场各赛一场。</p>
+<p>联赛战罢，结果已经尘埃落定。此时，联赛主席突发奇想，希望从中找出一条包含所有球队的“食物链”，来说明联赛的精彩程度。“食物链”为一个1至<em>N</em>的排列{ <em>T</em>1 <em>T</em>2 ⋯ <em>T**N</em> }，满足：球队<em>T</em>1战胜过球队<em>T</em>2，球队<em>T</em>2战胜过球队<em>T</em>3，⋯，球队<em>T</em>(<em>N</em>−1)战胜过球队<em>T**N</em>，球队<em>T**N</em>战胜过球队<em>T</em>1。</p>
+<p>现在主席请你从联赛结果中找出“食物链”。若存在多条“食物链”，请找出字典序最小的。</p>
+<p>注：排列{ <em>a</em>1 <em>a</em>2 ⋯ <em>a**N</em>}在字典序上小于排列{ <em>b</em>1 <em>b</em>2 ⋯ <em>b**N</em> }，当且仅当存在整数<em>K</em>（1≤<em>K</em>≤<em>N</em>），满足：<em>a**K</em>&lt;<em>b**K</em>且对于任意小于<em>K</em>的正整数<em>i</em>，<em>a**i</em>=<em>b**i</em>。</p>
+<h3 id="输入格式：-10"><a href="#输入格式：-10" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个整数<em>N</em>（2≤<em>N</em>≤20），为参赛球队数。随后<em>N</em>行，每行<em>N</em>个字符，给出了<em>N</em>×<em>N</em>的联赛结果表，其中第<em>i</em>行第<em>j</em>列的字符为球队<em>i</em>在主场对阵球队<em>j</em>的比赛结果：<code>W</code>表示球队<em>i</em>战胜球队<em>j</em>，<code>L</code>表示球队<em>i</em>负于球队<em>j</em>，<code>D</code>表示两队打平，<code>-</code>表示无效（当<em>i</em>=<em>j</em>时）。输入中无多余空格。</p>
+<h3 id="输出格式：-10"><a href="#输出格式：-10" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按题目要求找到“食物链”<em>T</em>1 <em>T</em>2 ⋯ <em>T**N</em>，将这<em>N</em>个数依次输出在一行上，数字间以1个空格分隔，行的首尾不得有多余空格。若不存在“食物链”，输出“No Solution”。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs in">5<br>-LWDW<br>W-LDW<br>WW-LW<br>DWW-W<br>DDLW-<br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs out">1 3 5 4 2<br></code></pre></td></tr></table></figure>
+
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-number">5</span><br><span class="hljs-operator">-</span><span class="hljs-variable">WDDW</span><br><span class="hljs-built_in">D</span><span class="hljs-operator">-</span><span class="hljs-variable">DWL</span><br><span class="hljs-variable">DD</span><span class="hljs-operator">-</span><span class="hljs-variable">DW</span><br><span class="hljs-variable">DDW</span><span class="hljs-operator">-</span><span class="hljs-built_in">D</span><br><span class="hljs-variable">DDDD</span><span class="hljs-operator">-</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">No Solution</span><br></code></pre></td></tr></table></figure>
+
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2023/04/16/GPLT-2/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">天梯赛的一些题-3</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2023/03/28/xposed/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">xposed框架相关事宜</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/img/avator.png" class="soft-size--round soft-style--box" alt="STERNE">
+    
+    
+      <h2>STERNE</h2>
+    
+    
+      <p>SDUer，大一入门，大二入土，大三老东西！</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>63</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        20
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>这里还什么都没有呢喵~</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">
+            帮助文档 (6)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/ACM/" style="font-size: 15px;" class="tags-cloud-5">ACM</a> <a href="/tags/Arc/" style="font-size: 11.25px;" class="tags-cloud-1">Arc</a> <a href="/tags/CCPC/" style="font-size: 13.75px;" class="tags-cloud-4">CCPC</a> <a href="/tags/HPC/" style="font-size: 10px;" class="tags-cloud-0">HPC</a> <a href="/tags/bot/" style="font-size: 10px;" class="tags-cloud-0">bot</a> <a href="/tags/c/" style="font-size: 12.5px;" class="tags-cloud-3">c</a> <a href="/tags/cpp/" style="font-size: 20px;" class="tags-cloud-10">cpp</a> <a href="/tags/deeplearning/" style="font-size: 15px;" class="tags-cloud-5">deeplearning</a> <a href="/tags/games/" style="font-size: 12.5px;" class="tags-cloud-3">games</a> <a href="/tags/hexo/" style="font-size: 11.25px;" class="tags-cloud-1">hexo</a> <a href="/tags/java/" style="font-size: 11.25px;" class="tags-cloud-1">java</a> <a href="/tags/maths/" style="font-size: 10px;" class="tags-cloud-0">maths</a> <a href="/tags/pyqt/" style="font-size: 10px;" class="tags-cloud-0">pyqt</a> <a href="/tags/python/" style="font-size: 17.5px;" class="tags-cloud-8">python</a> <a href="/tags/qt/" style="font-size: 10px;" class="tags-cloud-0">qt</a> <a href="/tags/recommends/" style="font-size: 10px;" class="tags-cloud-0">recommends</a> <a href="/tags/review/" style="font-size: 16.25px;" class="tags-cloud-6">review</a> <a href="/tags/sql/" style="font-size: 18.75px;" class="tags-cloud-9">sql</a> <a href="/tags/srtp/" style="font-size: 10px;" class="tags-cloud-0">srtp</a> <a href="/tags/test/" style="font-size: 10px;" class="tags-cloud-0">test</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/sterne012" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/sterne012" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2023 <a href="/" target="_blank">sterne</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
